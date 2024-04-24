@@ -1,0 +1,148 @@
+.header {
+  width: $w-full;
+  height: $h-5;
+  padding: $p-1 $p-5 * 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: all $transition-time-sm $transition-fn;
+  .header-menu {
+    .menu-link {
+      font-weight: $font-semibold;
+    }
+  }
+  .header-action {
+    * {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+    }
+  }
+  @include respond(laptop) {
+    padding: $p-1 $p-5;
+  }
+  @include respond(mdPhone) {
+    padding: $p-1;
+  }
+}
+
+.header-theme {
+  position: relative;
+  &:hover .theme-dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+  .theme-selected {
+    width: $w-2;
+    height: $h-2;
+    border-radius: $rounded;
+  }
+  .theme-dropdown {
+    width: $w-10;
+    padding: $p-1;
+    background: $bg-white;
+    border-radius: $rounded;
+    box-shadow: 0 0 10px $bg-gray;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $transition-time-sm $transition-fn;
+    .dropdown-item {
+      width: $w-2;
+      height: $h-2;
+    }
+  }
+}
+
+.header-translate {
+  .translate-locale {
+    color: $text-gray;
+    font-weight: $font-semibold;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .translate-locale-selected {
+    opacity: 1;
+  }
+}
+
+.header-fixed {
+  position: fixed;
+  box-shadow: 0 2px 5px $bg-gray;
+  animation: slideDown 0.2s linear;
+}
+
+// Mode
+.header-light {
+  background: $bg-white;
+}
+
+.header-dark {
+  background: $bg-deep-blue;
+  box-shadow: 0 2px 5px $bg-black;
+  * {
+    color: $text-white;
+  }
+}
+
+.header-mobile-dark {
+  background: $bg-deep-blue;
+  * {
+    color: $text-white;
+  }
+}
+
+// Color
+.header-translate-blue {
+  .translate-locale-selected {
+    color: $text-blue;
+  }
+}
+.header-translate-red {
+  .translate-locale-selected {
+    color: $text-red;
+  }
+}
+
+.header-translate-green {
+  .translate-locale-selected {
+    color: $text-green;
+  }
+}
+
+.header-translate-orange {
+  .translate-locale-selected {
+    color: $text-orange;
+  }
+}
+
+.header-translate-yellow {
+  .translate-locale-selected {
+    color: $text-yellow;
+  }
+}
+
+.header-translate-pink {
+  .translate-locale-selected {
+    color: $text-pink;
+  }
+}
+
+.header-translate-purple {
+  .translate-locale-selected {
+    color: $text-purple;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

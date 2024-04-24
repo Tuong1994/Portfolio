@@ -1,0 +1,11 @@
+.about {
+  transition: all $transition-time-sm $transition-fn;
+}
+
+// Mode
+.about-dark {
+  background: $bg-deep-blue;
+  * {
+    color: $text-white;
+  }
+}

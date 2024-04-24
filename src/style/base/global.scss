@@ -1,0 +1,10 @@
+.section-content {
+  min-height: $h-screen;
+  padding: $p-5 $p-5 * 2;
+  @include respond(laptop) {
+    padding: $p-5;
+  }
+  @include respond(mdPhone) {
+    padding: $p-1;
+  }
+}

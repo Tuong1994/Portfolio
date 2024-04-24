@@ -1,0 +1,75 @@
+.content-head {
+  .head-title {
+    margin-bottom: $m-1 - 0.8;
+    transition: all $transition-time-sm $transition-fn;
+  }
+  .head-line-long,
+  .head-line-short {
+    height: 4px;
+    transition: background $transition-time-sm $transition-fn;
+  }
+  .head-line-long {
+    width: $w-6;
+    margin-bottom: $m-1 - 0.5;
+  }
+  .head-line-short {
+    width: $w-3;
+  }
+}
+
+// Mode
+.content-head-dark {
+  .head-title {
+    color: $text-white;
+  }
+}
+
+// Color
+.content-head-blue {
+  .head-line-long,
+  .head-line-short {
+    background: $bg-blue;
+  }
+}
+
+.content-head-red {
+  .head-line-long,
+  .head-line-short {
+    background: $bg-red;
+  }
+}
+
+.content-head-green {
+  .head-line-long,
+  .head-line-short {
+    background: $bg-green;
+  }
+}
+
+.content-head-orange {
+  .head-line-long,
+  .head-line-short {
+    background: $bg-orange;
+  }
+}
+
+.content-head-yellow {
+  .head-line-long,
+  .head-line-short {
+    background: $bg-yellow;
+  }
+}
+
+.content-head-pink {
+  .head-line-long,
+  .head-line-short {
+    background: $bg-pink;
+  }
+}
+
+.content-head-purple {
+  .head-line-long,
+  .head-line-short {
+    background: $bg-purple;
+  }
+}

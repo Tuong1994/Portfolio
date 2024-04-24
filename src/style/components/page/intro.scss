@@ -1,0 +1,191 @@
+.intro {
+  padding-top: $p-5 * 2;
+  transition: all $transition-time-sm $transition-fn;
+  .intro-content {
+    .content-name {
+      font-size: $text-4xl + 1;
+      font-family: "Playball", cursive;
+    }
+    .content-action {
+      width: max-content;
+      padding: 0;
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+  .intro-image {
+    width: $w-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &::after {
+      content: "";
+      width: $w-10 * 2;
+      height: $h-10 * 3;
+      border-radius: $rounded-lg;
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      transition: background $transition-time-sm $transition-fn;
+      animation: counterClockwise 4s linear infinite;
+    }
+    .image-avatar {
+      position: relative;
+      border: 4px solid transparent;
+      border-top-left-radius: $rounded-xxl;
+      border-bottom-right-radius: $rounded-xxl;
+      overflow: hidden;
+      z-index: 1;
+      animation: clockwise 4s linear infinite;
+    }
+    .image-dots {
+      width: $w-10;
+      height: $h-10;
+      gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: absolute;
+      bottom: -1rem;
+      right: 4rem;
+      z-index: 1;
+      .dots-item {
+        width: $w-1;
+        height: $h-1;
+        border-radius: $rounded-full;
+        background: $bg-black;
+        transition: background $transition-time-sm $transition-fn;
+      }
+    }
+  }
+}
+
+// Mode
+.intro-dark {
+  background: $bg-deep-blue;
+  * {
+    color: $text-white;
+  }
+  .dots-item {
+    background: $bg-white !important;
+  }
+}
+
+// Color
+.intro-blue {
+  .content-name {
+    color: $text-blue;
+  }
+  .intro-image {
+    &::after {
+      background: $bg-blue-rgba-sm;
+    }
+    .image-avatar {
+      border-color: $bg-blue;
+    }
+  }
+}
+
+.intro-red {
+  .content-name {
+    color: $text-red;
+  }
+  .intro-image {
+    &::after {
+      background: $bg-red-rgba-sm;
+    }
+    .image-avatar {
+      border-color: $bg-red;
+    }
+  }
+}
+
+.intro-green {
+  .content-name {
+    color: $text-green;
+  }
+  .intro-image {
+    &::after {
+      background: $bg-green-rgba-sm;
+    }
+    .image-avatar {
+      border-color: $bg-green;
+    }
+  }
+}
+
+.intro-orange {
+  .content-name {
+    color: $text-orange;
+  }
+  .intro-image {
+    &::after {
+      background: $bg-orange-rgba-sm;
+    }
+    .image-avatar {
+      border-color: $bg-orange;
+    }
+  }
+}
+
+.intro-yellow {
+  .content-name {
+    color: $text-yellow;
+  }
+  .intro-image {
+    &::after {
+      background: $bg-yellow-rgba-sm;
+    }
+    .image-avatar {
+      border-color: $bg-yellow;
+    }
+  }
+}
+
+.intro-purple {
+  .content-name {
+    color: $text-purple;
+  }
+  .intro-image {
+    &::after {
+      background: $bg-purple-rgba-sm;
+    }
+    .image-avatar {
+      border-color: $bg-purple;
+    }
+  }
+}
+
+.intro-pink {
+  .content-name {
+    color: $text-pink;
+  }
+  .intro-image {
+    &::after {
+      background: $bg-pink-rgba-sm;
+    }
+    .image-avatar {
+      border-color: $bg-pink;
+    }
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(5px) rotate(-360deg);
+  }
+}
+
+@keyframes counterClockwise {
+  0% {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(10px) rotate(360deg);
+  }
+}
