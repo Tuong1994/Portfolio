@@ -1,0 +1,17 @@
+.content-wrapper {
+  padding: $p-5 $p-5 * 2;
+  transition: all $transition-time-sm $transition-fn;
+  @include respond(laptop) {
+    padding: $p-5;
+  }
+  @include respond(mdPhone) {
+    padding: $p-1;
+  }
+}
+
+.content-wrapper-dark {
+  background: $bg-deep-blue;
+  * {
+    color: $text-white;
+  }
+}

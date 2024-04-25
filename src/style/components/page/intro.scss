@@ -1,5 +1,6 @@
 .intro {
   padding-top: $p-5 * 2;
+  min-height: $h-screen;
   transition: all $transition-time-sm $transition-fn;
   .intro-content {
     .content-name {
@@ -60,14 +61,14 @@
       }
     }
   }
+  @include respond(mdTablet) {
+    min-height: unset;
+    margin-bottom: $m-5;
+  }
 }
 
 // Mode
 .intro-dark {
-  background: $bg-deep-blue;
-  * {
-    color: $text-white;
-  }
   .dots-item {
     background: $bg-white !important;
   }

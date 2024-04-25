@@ -37,11 +37,6 @@ const IntroContent: FC<IntroContentProps> = ({ color }) => {
           {lang.intro.action}
         </Button>
       </NavLink>
-      {/* <a href="/cv.pdf" download="CV - Nhâm Bổn Tường">
-          <Button ghost sizes="lg" color={color}>
-            {lang.intro.download}
-          </Button>
-        </a> */}
     </div>
   );
 };
