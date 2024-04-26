@@ -11,6 +11,9 @@ const about_vn = {
   education: {
     title: "Học vấn",
   },
+  skills: {
+    title: "Kỹ năng",
+  },
 };
 
 export default about_vn;

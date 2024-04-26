@@ -35,10 +35,10 @@ const Header: FC<HeaderProps> = () => {
   return (
     <header className={mainClassName}>
       <Row align="middle" justify="between">
-        <Col md={8} span={4}>
+        <Col md={8} span={6}>
           <HeaderLogo />
         </Col>
-        <Col xs={0} md={0} span={12}>
+        <Col xs={0} md={0} span={10}>
           <HeaderMenu />
         </Col>
         <Col xs={8} md={8} span={4}>

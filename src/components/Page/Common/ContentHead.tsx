@@ -2,8 +2,8 @@ import { ForwardRefRenderFunction, HTMLAttributes, forwardRef, ReactNode } from 
 import { Title } from "@/components/UI/Typography";
 import { TitleProps } from "@/components/UI/Typography/Title";
 import useThemeStore from "@/store/ThemeStore";
-import utils from "@/utils";
 import useModeStore from "@/store/ModeStore";
+import utils from "@/utils";
 
 interface ContentHeadProps extends HTMLAttributes<HTMLDivElement> {
   rootClassName?: string;

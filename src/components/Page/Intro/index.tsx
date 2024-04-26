@@ -23,7 +23,7 @@ const Intro: FC<IntroProps> = () => {
 
   const colorClassName = `intro-${color}`;
 
-  const mainClassName = utils.formatClassName("intro", colorClassName, modeClassName);
+  const mainClassName = utils.formatClassName("section-content", "intro", colorClassName, modeClassName);
 
   return (
     <NavigateContent rootClassName={mainClassName}>

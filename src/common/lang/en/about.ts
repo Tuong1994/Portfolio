@@ -11,6 +11,9 @@ const about_en = {
   education: {
     title: "Education",
   },
+  skills: {
+    title: "Skills",
+  },
 };
 
 export default about_en;

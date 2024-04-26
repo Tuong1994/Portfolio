@@ -2,17 +2,18 @@ import { FC } from "react";
 import { UI } from "@/components";
 import { linkId } from "@/common/constant";
 import ContentHead from "../Common/ContentHead";
-import useModeStore from "@/store/ModeStore";
-import utils from "@/utils";
-import useLang from "@/hooks/useLang";
-import useThemeStore from "@/store/ThemeStore";
 import AboutContent from "./AboutContent";
 import AboutPersonal from "./AboutPersonal";
 import AboutEducation from "./AboutEducation";
+import useModeStore from "@/store/ModeStore";
+import useLang from "@/hooks/useLang";
+import useThemeStore from "@/store/ThemeStore";
+import utils from "@/utils";
+import AboutSkills from "./AboutSkills";
 
 const { ABOUT } = linkId;
 
-const { Navigating, Grid, Button } = UI;
+const { Navigating, Grid } = UI;
 
 const { NavigateContent } = Navigating;
 
@@ -45,6 +46,7 @@ const About: FC<AboutProps> = () => {
           <AboutEducation lang={lang} />
         </Col>
       </Row>
+      <AboutSkills lang={lang} />
     </NavigateContent>
   );
 };
