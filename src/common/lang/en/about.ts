@@ -12,7 +12,7 @@ const about_en = {
     title: "Education",
   },
   skills: {
-    title: "Skills",
+    title: "My top skills",
   },
 };
 

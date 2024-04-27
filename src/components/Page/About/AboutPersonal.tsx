@@ -12,7 +12,12 @@ interface AboutPersonalProps {
 }
 
 const AboutPersonal: FC<AboutPersonalProps> = ({ lang, color }) => {
-  const infoRowProps: InfoRowProps = { labelSpanProps: { span: 6 }, textSpanProps: { span: 14 } };
+  const infoRowProps: InfoRowProps = {
+    labelProps: { size: 16 },
+    textProps: { size: 16 },
+    labelSpanProps: { span: 6 },
+    textSpanProps: { span: 14 },
+  };
   return (
     <Fragment>
       <InfoRow {...infoRowProps} label={lang.about.personal.email} text="nbtuong1994@gmail.com" />

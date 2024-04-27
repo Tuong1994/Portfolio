@@ -39,10 +39,10 @@ const About: FC<AboutProps> = () => {
       <ContentHead>{lang.header.menu.about}</ContentHead>
       <AboutContent lang={lang} />
       <Row justify="between" rootClassName="about-group">
-        <Col xs={24} span={12}>
+        <Col xs={24} md={24} lg={12} span={12}>
           <AboutPersonal lang={lang} color={color} />
         </Col>
-        <Col xs={24} span={12}>
+        <Col xs={24} md={24} lg={12} span={12}>
           <AboutEducation lang={lang} />
         </Col>
       </Row>

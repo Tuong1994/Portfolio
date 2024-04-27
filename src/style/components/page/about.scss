@@ -15,6 +15,21 @@
     border-bottom-right-radius: unset;
     transition: all $transition-time-sm $transition-fn;
   }
+  .about-icon {
+    .icon-view {
+      width: $w-10;
+      height: $h-10;
+      margin-bottom: $m-1;
+      background: $bg-white;
+      border-radius: $rounded-full;
+      border: 1rem solid transparent;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all $transition-time-sm $transition-fn;
+    }
+  }
 }
 
 // Color
@@ -22,11 +37,21 @@
   .about-education {
     border-color: $bg-blue;
   }
+  .about-icon {
+    .icon-view {
+      border-color: $bg-blue;
+    }
+  }
 }
 
 .about-red {
   .about-education {
     border-color: $bg-red;
+  }
+  .about-icon {
+    .icon-view {
+      border-color: $bg-red;
+    }
   }
 }
 
@@ -34,11 +59,21 @@
   .about-education {
     border-color: $bg-green;
   }
+  .about-icon {
+    .icon-view {
+      border-color: $bg-green;
+    }
+  }
 }
 
 .about-orange {
   .about-education {
     border-color: $bg-orange;
+  }
+  .about-icon {
+    .icon-view {
+      border-color: $bg-orange;
+    }
   }
 }
 
@@ -46,16 +81,31 @@
   .about-education {
     border-color: $bg-yellow;
   }
+  .about-icon {
+    .icon-view {
+      border-color: $bg-yellow;
+    }
+  }
 }
 
 .about-purple {
   .about-education {
     border-color: $bg-purple;
   }
+  .about-icon {
+    .icon-view {
+      border-color: $bg-purple;
+    }
+  }
 }
 
 .about-pink {
   .about-education {
     border-color: $bg-pink;
+  }
+  .about-icon {
+    .icon-view {
+      border-color: $bg-pink;
+    }
   }
 }

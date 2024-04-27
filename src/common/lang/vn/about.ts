@@ -12,7 +12,7 @@ const about_vn = {
     title: "Học vấn",
   },
   skills: {
-    title: "Kỹ năng",
+    title: "Kỹ năng hàng đầu của tôi",
   },
 };
 

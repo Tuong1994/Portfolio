@@ -15,7 +15,7 @@ interface AboutEducationProps {
 const AboutEducation: FC<AboutEducationProps> = ({ lang }) => {
   return (
     <Fragment>
-      <Title level={4}>{lang.about.education.title}</Title>
+      <Title level={3}>{lang.about.education.title}</Title>
       <div className="about-education">
         <Space align="middle">
           <Image imgWidth={50} imgHeight={50} src="/cybersoft.jpg" />
@@ -27,14 +27,14 @@ const AboutEducation: FC<AboutEducationProps> = ({ lang }) => {
         <List>
           <ListItem>
             <Space>
-              <span>Bootcamp Front End Web Developer</span>
-              <span>(09/2020 - 04/2021)</span>
+              <Paragraph size={16}>Bootcamp Front End Web Developer</Paragraph>
+              <Paragraph size={16}>(09/2020 - 04/2021)</Paragraph>
             </Space>
           </ListItem>
           <ListItem>
             <Space>
-              <span>Back End Developer - NodeJS</span>
-              <span>(06/2021 - 08/2021)</span>
+              <Paragraph size={16}>Back End Developer - NodeJS</Paragraph>
+              <Paragraph size={16}>(06/2021 - 08/2021)</Paragraph>
             </Space>
           </ListItem>
         </List>
