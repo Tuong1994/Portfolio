@@ -5,7 +5,6 @@ import ContentHead from "../Common/ContentHead";
 import AboutContent from "./AboutContent";
 import AboutPersonal from "./AboutPersonal";
 import AboutEducation from "./AboutEducation";
-import useModeStore from "@/store/ModeStore";
 import useLang from "@/hooks/useLang";
 import useThemeStore from "@/store/ThemeStore";
 import utils from "@/utils";
@@ -26,13 +25,9 @@ const About: FC<AboutProps> = () => {
 
   const color = useThemeStore((state) => state.color);
 
-  const mode = useModeStore((state) => state.mode);
-
-  const modeClassName = `about-${mode}`;
-
   const colorClassName = `about-${color}`;
 
-  const mainClassName = utils.formatClassName("about", colorClassName, modeClassName);
+  const mainClassName = utils.formatClassName("about", colorClassName);
 
   return (
     <NavigateContent id={ABOUT} rootClassName={mainClassName}>

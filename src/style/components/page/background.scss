@@ -1,0 +1,19 @@
+.background {
+  width: $w-full;
+  height: $h-10 * 5;
+  background-image: url("/bg-coding.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  &::after {
+    content: "";
+    width: $w-full;
+    height: $h-full;
+    background: $bg-black-rgba-md;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

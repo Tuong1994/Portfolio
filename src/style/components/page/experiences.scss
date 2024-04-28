@@ -1,0 +1,109 @@
+.experiences {
+  .experiences-work {
+    padding: $p-1;
+    padding-left: $p-5;
+    border-left: 4px solid transparent;
+    transition: all $transition-time-sm $transition-fn;
+    .work-company {
+      transition: all $transition-time-sm $transition-fn;
+    }
+    .work-project {
+      margin-top: $m-1;
+      padding: $p-1;
+      border-radius: $rounded-lg;
+      border-top: 1px solid transparent;
+      border-left: 1px solid transparent;
+      transition: all $transition-time-sm $transition-fn;
+      .project-title {
+        margin-bottom: $m-1;
+      }
+    }
+    @include respond(mdPhone) {
+      padding-left: $p-2;
+    }
+  }
+}
+
+.experiences-blue {
+  .experiences-work {
+    border-color: $bg-blue;
+    .work-company {
+      color: $text-blue;
+    }
+    .work-project {
+      border-color: $bg-blue;
+    }
+  }
+}
+
+.experiences-red {
+  .experiences-work {
+    border-color: $bg-red;
+    .work-company {
+      color: $text-red;
+    }
+    .work-project {
+      border-color: $bg-red;
+    }
+  }
+}
+
+.experiences-green {
+  .experiences-work {
+    border-color: $bg-green;
+    .work-company {
+      color: $text-green;
+    }
+    .work-project {
+      border-color: $bg-green;
+    }
+  }
+}
+
+.experiences-orange {
+  .experiences-work {
+    border-color: $bg-orange;
+    .work-company {
+      color: $text-orange;
+    }
+    .work-project {
+      border-color: $bg-orange;
+    }
+  }
+}
+
+.experiences-yellow {
+  .experiences-work {
+    border-color: $bg-yellow;
+    .work-company {
+      color: $text-yellow;
+    }
+    .work-project {
+      border-color: $bg-yellow;
+    }
+  }
+}
+
+.experiences-purple {
+  .experiences-work {
+    border-color: $bg-purple;
+    .work-company {
+      color: $text-purple;
+    }
+    .work-project {
+      border-color: $bg-purple;
+    }
+  }
+}
+
+.experiences-pink {
+  .experiences-work {
+    border-color: $bg-pink;
+    .work-company {
+      color: $text-pink;
+    }
+    .work-project {
+      border-color: $bg-pink;
+    }
+  }
+}
