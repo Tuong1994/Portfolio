@@ -6,6 +6,9 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
+  * {
+    color: $text-white;
+  }
   &::after {
     content: "";
     width: $w-full;
@@ -15,5 +18,58 @@
     top: 0;
     left: 0;
     z-index: 1;
+  }
+  .background-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    .content-mark {
+      transition: all $transition-time-sm $transition-fn;
+    }
+  }
+}
+
+// Color
+.background-blue {
+  .content-mark {
+    color: $text-blue;
+  }
+}
+
+.background-red {
+  .content-mark {
+    color: $text-red;
+  }
+}
+
+.background-green {
+  .content-mark {
+    color: $text-green;
+  }
+}
+
+.background-orange {
+  .content-mark {
+    color: $text-orange;
+  }
+}
+
+.background-yellow {
+  .content-mark {
+    color: $text-yellow;
+  }
+}
+
+.background-purple {
+  .content-mark {
+    color: $text-purple;
+  }
+}
+
+.background-pink {
+  .content-mark {
+    color: $text-pink;
   }
 }
