@@ -1,6 +1,7 @@
 import { FC, Fragment } from "react";
 import { UI } from "@/components";
 import { Lang } from "@/common/lang";
+import IconView from "../Common/IconView";
 
 const { Image, Divider, Grid, Typography } = UI;
 
@@ -72,19 +73,8 @@ const AboutSkills: FC<AboutSkillsProps> = ({ lang }) => {
       <Divider />
       <Row justify="center">
         {logos.map((logo) => (
-          <Col xs={8} span={4} key={logo.img}>
-            <Row justify="center">
-              <Col>
-                <div className="about-icon">
-                  <div className="icon-view">
-                    <Image imgWidth={50} imgHeight={50} src={`/dev/${logo.img}.svg`} />
-                  </div>
-                  <Paragraph align="center" weight={600}>
-                    {logo.name}
-                  </Paragraph>
-                </div>
-              </Col>
-            </Row>
+          <Col xs={12} span={4} key={logo.img}>
+            <IconView src={`/dev/${logo.img}.svg`} iconName={logo.name} />
           </Col>
         ))}
       </Row>

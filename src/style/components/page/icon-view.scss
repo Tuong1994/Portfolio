@@ -1,0 +1,52 @@
+.icon-view {
+  background: $bg-white;
+  border-radius: $rounded-full;
+  border-style: solid;
+  border-color: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all $transition-time-sm $transition-fn;
+}
+
+.icon-view-name {
+  margin-top: $m-1;
+}
+
+.icon-view-hover {
+  &:hover {
+    .image {
+      transform: scale(0.7);
+    }
+  }
+}
+
+// Color
+.icon-view-blue {
+  border-color: $bg-blue;
+}
+
+.icon-view-red {
+  border-color: $bg-red;
+}
+
+.icon-view-green {
+  border-color: $bg-green;
+}
+
+.icon-view-orange {
+  border-color: $bg-orange;
+}
+
+.icon-view-yellow {
+  border-color: $bg-yellow;
+}
+
+.icon-view-purple {
+  border-color: $bg-purple;
+}
+
+.icon-view-pink {
+  border-color: $bg-pink;
+}

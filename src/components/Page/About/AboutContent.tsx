@@ -13,7 +13,7 @@ interface AboutContentProps {
 const AboutContent: FC<AboutContentProps> = ({ lang }) => {
   return (
     <Fragment>
-      <Paragraph size={20}>{lang.about.content}</Paragraph>
+      <Paragraph size={18}>{lang.about.content}</Paragraph>
       <Divider />
     </Fragment>
   );

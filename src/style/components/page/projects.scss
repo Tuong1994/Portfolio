@@ -1,0 +1,182 @@
+.projects {
+  .projects-tabs {
+    .tabs-head {
+      margin-bottom: $m-2;
+      height: $h-5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .head-title {
+        padding: $p-1 $p-2;
+        margin: 0 $m-1;
+        border-radius: $rounded;
+        border-bottom: 1px solid transparent;
+        transition: all $transition-time-xs $transition-fn;
+        cursor: pointer;
+        &:hover {
+          border-color: transparent;
+        }
+      }
+      .head-title-selected {
+        font-size: $text-md;
+        font-weight: $font-semibold;
+        color: $text-white;
+      }
+    }
+    .tabs-content {
+      .content-item-selected {
+        animation: fade 0.2s linear 1;
+      }
+    }
+  }
+  .projects-group {
+    padding: $p-1;
+    padding-left: $p-5;
+    border-left: 5px solid transparent;
+    transition: all $transition-time-sm $transition-fn;
+    .group-name {
+      transition: all $transition-time-sm $transition-fn;
+    }
+    .group-features-title {
+      margin-bottom: $m-2;
+    }
+    .group-card {
+      padding: $p-1;
+      min-height: $h-10;
+      border: 1px solid transparent;
+      border-bottom-right-radius: $rounded-lg;
+      border-top-left-radius: $rounded-lg;
+      transition: all $transition-time-sm $transition-fn;
+    }
+    @include respond(mdPhone) {
+      padding-left: $p-2;
+    }
+  }
+}
+
+// Color
+.projects-blue {
+  .head-title-selected {
+    background: $bg-blue;
+  }
+  .projects-group {
+    border-color: $bg-blue;
+    .group-name {
+      color: $text-blue;
+    }
+    .group-card {
+      border-color: $bg-blue;
+      &:hover {
+        background: $bg-blue-rgba-sm;
+      }
+    }
+  }
+}
+
+.projects-red {
+  .head-title-selected {
+    background: $bg-red;
+  }
+  .projects-group {
+    border-color: $bg-red;
+    .group-name {
+      color: $text-red;
+    }
+    .group-card {
+      border-color: $bg-red;
+      &:hover {
+        background: $bg-red-rgba-sm;
+      }
+    }
+  }
+}
+
+.projects-green {
+  .head-title-selected {
+    background: $bg-green;
+  }
+  .projects-group {
+    border-color: $bg-green;
+    .group-name {
+      color: $text-green;
+    }
+    .group-card {
+      border-color: $bg-green;
+      &:hover {
+        background: $bg-green-rgba-sm;
+      }
+    }
+  }
+}
+
+.projects-orange {
+  .head-title-selected {
+    background: $bg-orange;
+  }
+  .projects-group {
+    border-color: $bg-orange;
+    .group-name {
+      color: $text-orange;
+    }
+    .group-card {
+      border-color: $bg-orange;
+      &:hover {
+        background: $bg-orange-rgba-sm;
+      }
+    }
+  }
+}
+
+.projects-yellow {
+  .head-title-selected {
+    background: $bg-yellow;
+  }
+  .projects-group {
+    border-color: $bg-yellow;
+    .group-name {
+      color: $text-yellow;
+    }
+    .group-card {
+      border-color: $bg-yellow;
+      &:hover {
+        background: $bg-yellow-rgba-sm;
+      }
+    }
+  }
+}
+
+.projects-purple {
+  .head-title-selected {
+    background: $bg-purple;
+  }
+  .projects-group {
+    border-color: $bg-purple;
+    .group-name {
+      color: $text-purple;
+    }
+    .group-card {
+      border-color: $bg-purple;
+      &:hover {
+        background: $bg-purple-rgba-sm;
+      }
+    }
+  }
+}
+
+.projects-pink {
+  .head-title-selected {
+    background: $bg-pink;
+  }
+  .projects-group {
+    border-color: $bg-pink;
+    .group-name {
+      color: $text-pink;
+    }
+    .group-card {
+      border-color: $bg-pink;
+      &:hover {
+        background: $bg-pink-rgba-sm;
+      }
+    }
+  }
+}

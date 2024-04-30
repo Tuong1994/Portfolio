@@ -4,6 +4,7 @@ import ContentWrapper from "./components/Page/Common/ContentWrapper";
 import Experiences from "./components/Page/Experiences";
 import Header from "./components/Page/Header";
 import Intro from "./components/Page/Intro";
+import Projects from "./components/Page/Projects";
 import "./style/main.scss";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Background />
       <ContentWrapper>
         <Experiences />
+        <Projects />
       </ContentWrapper>
     </>
   );
