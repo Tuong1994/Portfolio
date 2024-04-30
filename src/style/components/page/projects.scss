@@ -52,6 +52,36 @@
       padding-left: $p-2;
     }
   }
+  .project-card {
+    margin-bottom: $m-2;
+    padding: $p-2;
+    border: 1px solid transparent;
+    border-bottom-right-radius: $rounded-xxl;
+    border-top-left-radius: $rounded-xxl;
+    transition: all $transition-time-sm $transition-fn;
+    &:last-child {
+      margin: 0;
+    }
+    .card-title {
+      transition: all $transition-time-sm $transition-fn;
+    }
+    .card-image {
+      padding: $p-2;
+      border-top: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-radius: $rounded-lg;
+      border-bottom-right-radius: unset;
+      transition: all $transition-time-sm $transition-fn;
+      .image {
+        border-radius: $rounded;
+        border: 1px solid transparent;
+        transition: all $transition-time-sm $transition-fn;
+      }
+      .image-action {
+        margin-top: $m-2;
+      }
+    }
+  }
 }
 
 // Color
@@ -68,6 +98,18 @@
       border-color: $bg-blue;
       &:hover {
         background: $bg-blue-rgba-sm;
+      }
+    }
+  }
+  .project-card {
+    border-color: $bg-blue;
+    .card-title {
+      color: $text-blue;
+    }
+    .card-image {
+      border-color: $bg-blue;
+      .image {
+        border-color: $bg-blue;
       }
     }
   }
@@ -89,6 +131,18 @@
       }
     }
   }
+  .project-card {
+    border-color: $bg-red;
+    .card-title {
+      color: $text-red;
+    }
+    .card-image {
+      border-color: $bg-red;
+      .image {
+        border-color: $bg-red;
+      }
+    }
+  }
 }
 
 .projects-green {
@@ -104,6 +158,18 @@
       border-color: $bg-green;
       &:hover {
         background: $bg-green-rgba-sm;
+      }
+    }
+  }
+  .project-card {
+    border-color: $bg-green;
+    .card-title {
+      color: $text-green;
+    }
+    .card-image {
+      border-color: $bg-green;
+      .image {
+        border-color: $bg-green;
       }
     }
   }
@@ -125,6 +191,18 @@
       }
     }
   }
+  .project-card {
+    border-color: $bg-orange;
+    .card-title {
+      color: $text-orange;
+    }
+    .card-image {
+      border-color: $bg-orange;
+      .image {
+        border-color: $bg-orange;
+      }
+    }
+  }
 }
 
 .projects-yellow {
@@ -140,6 +218,18 @@
       border-color: $bg-yellow;
       &:hover {
         background: $bg-yellow-rgba-sm;
+      }
+    }
+  }
+  .project-card {
+    border-color: $bg-yellow;
+    .card-title {
+      color: $text-yellow;
+    }
+    .card-image {
+      border-color: $bg-yellow;
+      .image {
+        border-color: $bg-yellow;
       }
     }
   }
@@ -161,6 +251,18 @@
       }
     }
   }
+  .project-card {
+    border-color: $bg-purple;
+    .card-title {
+      color: $text-purple;
+    }
+    .card-image {
+      border-color: $bg-purple;
+      .image {
+        border-color: $bg-purple;
+      }
+    }
+  }
 }
 
 .projects-pink {
@@ -176,6 +278,18 @@
       border-color: $bg-pink;
       &:hover {
         background: $bg-pink-rgba-sm;
+      }
+    }
+  }
+  .project-card {
+    border-color: $bg-pink;
+    .card-title {
+      color: $text-pink;
+    }
+    .card-image {
+      border-color: $bg-pink;
+      .image {
+        border-color: $bg-pink;
       }
     }
   }

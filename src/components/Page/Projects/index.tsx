@@ -6,6 +6,7 @@ import ProjectsCompany from "./ProjectsCompany";
 import useLang from "@/hooks/useLang";
 import useThemeStore from "@/store/ThemeStore";
 import utils from "@/utils";
+import ProjectsPersonal from "./ProjectsPersonal";
 
 const { PROJECTS } = linkId;
 
@@ -28,7 +29,11 @@ const Projects: FC<ProjectsProps> = () => {
 
   const tabs = [
     { id: "company", title: lang.projects.company.title, content: <ProjectsCompany lang={lang} /> },
-    { id: "personal", title: lang.projects.personal.title, content: "Personal" },
+    {
+      id: "personal",
+      title: lang.projects.personal.title,
+      content: <ProjectsPersonal lang={lang} color={color} />,
+    },
   ];
 
   const handleSelectTab = (id: string) => setSelectedTab(id);
