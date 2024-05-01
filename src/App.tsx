@@ -1,4 +1,5 @@
 import { Container } from "./components/UI/Layout";
+import { ToastMessage } from "./components/UI";
 import About from "./components/Page/About";
 import Background from "./components/Page/Background";
 import ContentWrapper from "./components/Page/Common/ContentWrapper";
@@ -23,6 +24,7 @@ function App() {
         <Projects />
         <Contact />
       </ContentWrapper>
+      <ToastMessage />
     </Container>
   );
 }

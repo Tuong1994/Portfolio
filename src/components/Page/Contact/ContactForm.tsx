@@ -3,6 +3,7 @@ import { UI, Control } from "@/components";
 import { Lang } from "@/common/lang";
 import { ThemeColor } from "@/store/ThemeStore";
 import useForm from "@/components/Control/Form/useForm";
+import useMessage from "@/components/UI/ToastMessage/useMessage";
 import emailjs from "@emailjs/browser";
 
 const { Button } = UI;
@@ -22,6 +23,8 @@ interface FormData {
 }
 
 const ContactForm: FC<ContactFormProps> = ({ lang, color }) => {
+  const messageApi = useMessage();
+
   const [loading, setLoading] = useState<boolean>(false);
 
   const form = useForm();
@@ -42,10 +45,11 @@ const ContactForm: FC<ContactFormProps> = ({ lang, color }) => {
       .then(
         () => {
           setLoading(false);
+          messageApi.success(lang.contact.messageSuccess);
           form?.resetForm();
         },
-        (error) => {
-          console.log("FAILED...", error.text);
+        () => {
+          messageApi.success(lang.contact.messageError);
           setLoading(false);
         }
       );

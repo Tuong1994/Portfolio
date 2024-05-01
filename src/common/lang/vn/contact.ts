@@ -8,6 +8,8 @@ const contact_vn = {
     message: "Tin nhắn",
   },
   action: "Gửi email",
+  messageSuccess: 'Email đã được gửi',
+  messageError: ''
 };
 
 export default contact_vn;

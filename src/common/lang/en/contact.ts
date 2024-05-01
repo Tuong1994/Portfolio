@@ -8,6 +8,8 @@ const contact_en = {
     message: "Message",
   },
   action: "Send email",
+  messageSuccess: "Email has been sent",
+  messageError: "Lỗi! Không thể gửi email",
 };
 
 export default contact_en;
