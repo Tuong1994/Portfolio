@@ -1,5 +1,8 @@
 .projects {
   .projects-tabs {
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: all $transition-time-md $transition-fn;
     .tabs-head {
       margin-bottom: $m-2;
       height: $h-5;
@@ -85,6 +88,13 @@
         margin-top: $m-2;
       }
     }
+  }
+}
+
+.projects-reveal {
+  .projects-tabs {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

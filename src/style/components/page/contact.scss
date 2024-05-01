@@ -1,4 +1,8 @@
 .contact {
+  .contact-content {
+    opacity: 0;
+    transition: all $transition-time-md $transition-fn;
+  }
   .contact-info,
   .contact-form {
     padding: $p-2;
@@ -39,6 +43,12 @@
         width: $w-full;
       }
     }
+  }
+}
+
+.contact-reveal {
+  .contact-content {
+    opacity: 1;
   }
 }
 

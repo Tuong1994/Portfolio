@@ -1,5 +1,8 @@
 .content-head {
   margin-bottom: $m-5;
+  opacity: 0;
+  transform: translateX(-10rem);
+  transition: all $transition-time-md $transition-fn;
   .head-title {
     margin-bottom: $m-1 - 0.8;
     transition: all $transition-time-sm $transition-fn;
@@ -16,6 +19,11 @@
   .head-line-short {
     width: $w-3;
   }
+}
+
+.content-head-reveal {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 // Mode

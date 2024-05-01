@@ -1,14 +1,15 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { UI } from "@/components";
 import { linkId } from "@/common/constant";
 import ContentHead from "../Common/ContentHead";
 import AboutContent from "./AboutContent";
 import AboutPersonal from "./AboutPersonal";
 import AboutEducation from "./AboutEducation";
+import AboutSkills from "./AboutSkills";
 import useLang from "@/hooks/useLang";
 import useThemeStore from "@/store/ThemeStore";
+import useReveal from "@/hooks/useReveal";
 import utils from "@/utils";
-import AboutSkills from "./AboutSkills";
 
 const { ABOUT } = linkId;
 
@@ -25,12 +26,18 @@ const About: FC<AboutProps> = () => {
 
   const color = useThemeStore((state) => state.color);
 
+  const aboutRef = useRef<HTMLDivElement>(null);
+
+  const reveal = useReveal(aboutRef);
+
   const colorClassName = `about-${color}`;
 
-  const mainClassName = utils.formatClassName("about", colorClassName);
+  const revealClassName = reveal ? "about-reveal" : "";
+
+  const mainClassName = utils.formatClassName("about", colorClassName, revealClassName);
 
   return (
-    <NavigateContent id={ABOUT} rootClassName={mainClassName}>
+    <NavigateContent ref={aboutRef} id={ABOUT} rootClassName={mainClassName}>
       <ContentHead>{lang.header.menu.about}</ContentHead>
       <AboutContent lang={lang} />
       <Row justify="between" rootClassName="about-group">

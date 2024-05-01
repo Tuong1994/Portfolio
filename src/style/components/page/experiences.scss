@@ -1,9 +1,11 @@
 .experiences {
   .experiences-work {
+    opacity: 0;
     padding: $p-1;
     padding-left: $p-5;
     border-left: 4px solid transparent;
-    transition: all $transition-time-sm $transition-fn;
+    transform: translateX(10rem);
+    transition: all $transition-time-md $transition-fn;
     .work-company {
       transition: all $transition-time-sm $transition-fn;
     }
@@ -21,6 +23,13 @@
     @include respond(mdPhone) {
       padding-left: $p-2;
     }
+  }
+}
+
+.experiences-reveal {
+  .experiences-work {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

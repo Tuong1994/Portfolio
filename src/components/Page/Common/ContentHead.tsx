@@ -1,9 +1,14 @@
-import { ForwardRefRenderFunction, HTMLAttributes, forwardRef, ReactNode } from "react";
+import { HTMLAttributes, forwardRef, ReactNode, useRef, ForwardedRef, FC, useImperativeHandle } from "react";
 import { Title } from "@/components/UI/Typography";
 import { TitleProps } from "@/components/UI/Typography/Title";
 import useThemeStore from "@/store/ThemeStore";
 import useLayout from "@/components/UI/Layout/useLayout";
+import useReveal from "@/hooks/useReveal";
 import utils from "@/utils";
+
+type Ref = {
+  el: HTMLDivElement;
+};
 
 interface ContentHeadProps extends HTMLAttributes<HTMLDivElement> {
   rootClassName?: string;
@@ -11,11 +16,17 @@ interface ContentHeadProps extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode;
 }
 
-const ContentHead: ForwardRefRenderFunction<HTMLDivElement, ContentHeadProps> = (
+const ContentHead: FC<ContentHeadProps> = (
   { rootClassName = "", children, titleProps, ...restProps },
-  ref
+  ref: ForwardedRef<Ref>
 ) => {
   const { layoutValue } = useLayout();
+
+  const headRef = useRef<HTMLDivElement>(null);
+
+  useImperativeHandle(ref, () => ({ el: headRef.current as HTMLDivElement }));
+
+  const reveal = useReveal(headRef);
 
   const color = useThemeStore((state) => state.color);
 
@@ -25,10 +36,12 @@ const ContentHead: ForwardRefRenderFunction<HTMLDivElement, ContentHeadProps> = 
 
   const modeClassName = `content-head-${layoutValue.layoutTheme}`;
 
-  const mainClassName = utils.formatClassName("content-head", colorClassName, modeClassName);
+  const revealClassName = reveal ? "content-head-reveal" : "";
+
+  const mainClassName = utils.formatClassName("content-head", colorClassName, modeClassName, revealClassName);
 
   return (
-    <div ref={ref} {...restProps} className={mainClassName}>
+    <div ref={headRef} {...restProps} className={mainClassName}>
       <Title {...titleDefaultProps}>{children}</Title>
       <div className="head-line-long" />
       <div className="head-line-short" />

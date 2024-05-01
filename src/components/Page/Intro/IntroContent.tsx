@@ -6,7 +6,7 @@ import useLang from "@/hooks/useLang";
 
 const { ABOUT } = linkId;
 
-const { Typography, Navigating, Space, Button, Divider, TypingText } = UI;
+const { Typography, Navigating, Space, Divider, TypingText } = UI;
 
 const { Paragraph } = Typography;
 

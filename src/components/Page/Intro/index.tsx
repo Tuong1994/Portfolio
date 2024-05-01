@@ -33,6 +33,11 @@ const Intro: FC<IntroProps> = () => {
         </Col>
         <Col xs={24} md={24} lg={12} span={14}>
           <IntroContent color={color} />
+          <div className="info-arrow">
+            <div className="arrow-chevron"></div>
+            <div className="arrow-chevron"></div>
+            <div className="arrow-chevron"></div>
+          </div>
         </Col>
       </Row>
     </NavigateContent>

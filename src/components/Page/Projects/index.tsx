@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useRef, useState } from "react";
 import { UI } from "@/components";
 import { linkId } from "@/common/constant";
 import ContentHead from "../Common/ContentHead";
@@ -7,6 +7,7 @@ import useLang from "@/hooks/useLang";
 import useThemeStore from "@/store/ThemeStore";
 import utils from "@/utils";
 import ProjectsPersonal from "./ProjectsPersonal";
+import useReveal from "@/hooks/useReveal";
 
 const { PROJECTS } = linkId;
 
@@ -21,11 +22,17 @@ const Projects: FC<ProjectsProps> = () => {
 
   const color = useThemeStore((state) => state.color);
 
+  const projectsRef = useRef<HTMLDivElement>(null);
+
+  const reveal = useReveal(projectsRef);
+
   const [selectedTab, setSelectedTab] = useState<string>("company");
 
   const colorClassName = `projects-${color}`;
 
-  const mainClassName = utils.formatClassName("section-content", "projects", colorClassName);
+  const revealClassName = reveal ? "projects-reveal" : "";
+
+  const mainClassName = utils.formatClassName("section-content", "projects", colorClassName, revealClassName);
 
   const tabs = [
     { id: "company", title: lang.projects.company.title, content: <ProjectsCompany lang={lang} /> },
@@ -65,7 +72,7 @@ const Projects: FC<ProjectsProps> = () => {
   };
 
   return (
-    <NavigateContent id={PROJECTS} rootClassName={mainClassName}>
+    <NavigateContent ref={projectsRef} id={PROJECTS} rootClassName={mainClassName}>
       <ContentHead>{lang.header.menu.projects}</ContentHead>
       <div className="projects-tabs">
         <div className="tabs-head">{renderTitle()}</div>

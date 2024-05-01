@@ -1,7 +1,15 @@
 .about {
   transition: all $transition-time-sm $transition-fn;
+  .about-content {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: all $transition-time-md $transition-fn;
+  }
   .about-group {
+    opacity: 0;
     margin-bottom: $m-3;
+    transform: translateY(10rem);
+    transition: all $transition-time-md $transition-fn;
   }
   .about-download {
     display: block;
@@ -14,6 +22,14 @@
     border-radius: $rounded-lg;
     border-bottom-right-radius: unset;
     transition: all $transition-time-sm $transition-fn;
+  }
+}
+
+.about-reveal {
+  .about-content,
+  .about-group {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

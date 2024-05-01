@@ -1,10 +1,11 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { UI } from "@/components";
 import { linkId } from "@/common/constant";
 import ContentHead from "../Common/ContentHead";
-import useLang from "@/hooks/useLang";
 import ExperiencesWork from "./ExperiencesWork";
 import useThemeStore from "@/store/ThemeStore";
+import useReveal from "@/hooks/useReveal";
+import useLang from "@/hooks/useLang";
 import utils from "@/utils";
 
 const { EXPERIENCES } = linkId;
@@ -18,14 +19,25 @@ interface ExperiencesProps {}
 const Experiences: FC<ExperiencesProps> = () => {
   const { lang } = useLang();
 
+  const experiencesRef = useRef<HTMLDivElement>(null);
+
+  const reveal = useReveal(experiencesRef);
+
   const color = useThemeStore((state) => state.color);
 
   const colorClassName = `experiences-${color}`;
 
-  const mainClassName = utils.formatClassName("section-content", "experiences", colorClassName);
+  const revealClassName = reveal ? "experiences-reveal" : "";
+
+  const mainClassName = utils.formatClassName(
+    "section-content",
+    "experiences",
+    colorClassName,
+    revealClassName
+  );
 
   return (
-    <NavigateContent id={EXPERIENCES} rootClassName={mainClassName}>
+    <NavigateContent ref={experiencesRef} id={EXPERIENCES} rootClassName={mainClassName}>
       <ContentHead>{lang.header.menu.experiences}</ContentHead>
       <ExperiencesWork lang={lang} />
     </NavigateContent>
