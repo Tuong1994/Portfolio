@@ -1,5 +1,4 @@
 import { FC, useEffect, useState } from "react";
-import { Image } from "@/components/UI";
 import useThemeStore from "@/store/ThemeStore";
 
 interface HeaderLogoProps {}
@@ -13,7 +12,7 @@ const HeaderLogo: FC<HeaderLogoProps> = () => {
     setSrc(`/logo/logo-${color}.svg`);
   }, [color]);
 
-  return <Image imgWidth={100} imgHeight={30} src={src} />;
+  return <img className="header-logo" src={src} />;
 };
 
 export default HeaderLogo;

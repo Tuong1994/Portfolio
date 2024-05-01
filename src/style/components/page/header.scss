@@ -7,6 +7,10 @@
   left: 0;
   z-index: 10;
   transition: all $transition-time-sm $transition-fn;
+  .header-logo {
+    width: $w-10;
+    height: $h-3;
+  }
   .header-menu {
     .menu-link {
       font-weight: $font-semibold;
