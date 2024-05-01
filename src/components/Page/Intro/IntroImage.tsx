@@ -1,5 +1,5 @@
-import { Image } from "@/components/UI";
 import { FC } from "react";
+import { Image } from "@/components/UI";
 
 interface IntroImageProps {}
 

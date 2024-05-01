@@ -9,10 +9,9 @@
     }
     .content-action {
       width: max-content;
-      padding: 0;
-      &:hover {
-        background: transparent;
-      }
+      color: $text-white;
+      font-size: $text-md;
+      transition: all $transition-time-sm $transition-fn;
     }
   }
   .intro-image {
@@ -31,6 +30,12 @@
       left: 0;
       transition: background $transition-time-sm $transition-fn;
       animation: counterClockwise 4s linear infinite;
+      @include respond(mdTablet) {
+        left: 10rem;
+      }
+      @include respond(mdPhone) {
+        left: 0;
+      }
     }
     .image-avatar {
       position: relative;
@@ -59,6 +64,12 @@
         background: $bg-black;
         transition: background $transition-time-sm $transition-fn;
       }
+      @include respond(mdTablet) {
+        right: 15rem;
+      }
+      @include respond(mdPhone) {
+        right: 2rem;
+      }
     }
   }
   @include respond(mdTablet) {
@@ -79,6 +90,9 @@
   .content-name {
     color: $text-blue;
   }
+  .content-action {
+    background: $bg-blue;
+  }
   .intro-image {
     &::after {
       background: $bg-blue-rgba-sm;
@@ -92,6 +106,9 @@
 .intro-red {
   .content-name {
     color: $text-red;
+  }
+  .content-action {
+    background: $bg-red;
   }
   .intro-image {
     &::after {
@@ -107,6 +124,9 @@
   .content-name {
     color: $text-green;
   }
+  .content-action {
+    background: $bg-green;
+  }
   .intro-image {
     &::after {
       background: $bg-green-rgba-sm;
@@ -120,6 +140,9 @@
 .intro-orange {
   .content-name {
     color: $text-orange;
+  }
+  .content-action {
+    background: $bg-orange;
   }
   .intro-image {
     &::after {
@@ -135,6 +158,9 @@
   .content-name {
     color: $text-yellow;
   }
+  .content-action {
+    background: $bg-yellow;
+  }
   .intro-image {
     &::after {
       background: $bg-yellow-rgba-sm;
@@ -149,6 +175,9 @@
   .content-name {
     color: $text-purple;
   }
+  .content-action {
+    background: $bg-purple;
+  }
   .intro-image {
     &::after {
       background: $bg-purple-rgba-sm;
@@ -162,6 +191,9 @@
 .intro-pink {
   .content-name {
     color: $text-pink;
+  }
+  .content-action {
+    background: $bg-pink;
   }
   .intro-image {
     &::after {

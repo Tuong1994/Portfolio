@@ -33,9 +33,7 @@ const IntroContent: FC<IntroContentProps> = ({ color }) => {
       <Paragraph size={18}>{lang.intro.content}</Paragraph>
       <Divider />
       <NavLink id={ABOUT} rootClassName="content-action">
-        <Button color={color} sizes="lg">
-          {lang.intro.action}
-        </Button>
+        {lang.intro.action}
       </NavLink>
     </div>
   );

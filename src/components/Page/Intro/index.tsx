@@ -28,11 +28,11 @@ const Intro: FC<IntroProps> = () => {
   return (
     <NavigateContent rootClassName={mainClassName}>
       <Row align="middle" justify="between">
+        <Col xs={24} md={24} lg={12} span={10}>
+          <IntroImage />
+        </Col>
         <Col xs={24} md={24} lg={12} span={14}>
           <IntroContent color={color} />
-        </Col>
-        <Col xs={0} md={0} lg={12} span={10}>
-          <IntroImage />
         </Col>
       </Row>
     </NavigateContent>
