@@ -72,7 +72,11 @@
       border-radius: $rounded-lg;
       border-bottom-right-radius: unset;
       transition: all $transition-time-sm $transition-fn;
-      .image {
+      &:hover .image-wrapper .image {
+        transform: scale(1.1);
+      }
+      .image-wrapper {
+        overflow: hidden;
         border-radius: $rounded;
         border: 1px solid transparent;
         transition: all $transition-time-sm $transition-fn;
@@ -108,7 +112,7 @@
     }
     .card-image {
       border-color: $bg-blue;
-      .image {
+      .image-wrapper {
         border-color: $bg-blue;
       }
     }
@@ -138,7 +142,7 @@
     }
     .card-image {
       border-color: $bg-red;
-      .image {
+      .image-wrapper {
         border-color: $bg-red;
       }
     }
@@ -168,7 +172,7 @@
     }
     .card-image {
       border-color: $bg-green;
-      .image {
+      .image-wrapper {
         border-color: $bg-green;
       }
     }
@@ -198,7 +202,7 @@
     }
     .card-image {
       border-color: $bg-orange;
-      .image {
+      .image-wrapper {
         border-color: $bg-orange;
       }
     }
@@ -228,7 +232,7 @@
     }
     .card-image {
       border-color: $bg-yellow;
-      .image {
+      .image-wrapper {
         border-color: $bg-yellow;
       }
     }
@@ -258,7 +262,7 @@
     }
     .card-image {
       border-color: $bg-purple;
-      .image {
+      .image-wrapper {
         border-color: $bg-purple;
       }
     }
@@ -288,7 +292,7 @@
     }
     .card-image {
       border-color: $bg-pink;
-      .image {
+      .image-wrapper {
         border-color: $bg-pink;
       }
     }

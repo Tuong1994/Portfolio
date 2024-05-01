@@ -99,7 +99,9 @@ const ProjectsPersonal: FC<ProjectsPersonalProps> = ({ lang, color }) => {
           </Col>
           <Col xs={24} md={24} lg={12} span={12}>
             <div className="card-image">
-              <Image imgWidth="100%" src={project.imageUrl} />
+              <div className="image-wrapper">
+                <Image imgWidth="100%" src={project.imageUrl} />
+              </div>
               <Space rootClassName="image-action">
                 <a href={project.link} target="_blank">
                   <Button color={color}>{lang.projects.personal.demo}</Button>
