@@ -49,7 +49,7 @@ const ContactForm: FC<ContactFormProps> = ({ lang, color }) => {
           form?.resetForm();
         },
         () => {
-          messageApi.success(lang.contact.messageError);
+          messageApi.error(lang.contact.messageError);
           setLoading(false);
         }
       );
