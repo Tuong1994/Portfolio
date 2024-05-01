@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { UI } from "@/components";
 import { DrawerProps } from "@/components/UI/Drawer";
+import { useViewpoint } from "@/hooks";
 import HeaderTranslate from "./HeaderTranslate";
 import HeaderTheme from "./HeaderTheme";
 import useMenu from "./useMenu";
-import { useViewpoint } from "@/hooks";
-import useModeStore from "@/store/ModeStore";
+import useLayout from "@/components/UI/Layout/useLayout";
 import utils from "@/utils";
 
 const { Drawer, Divider, Space, Navigating } = UI;
@@ -15,13 +15,13 @@ const { NavLink } = Navigating;
 interface HeaderMobileProps extends DrawerProps {}
 
 const HeaderMobile: FC<HeaderMobileProps> = ({ ...restProps }) => {
-  const menus = useMenu();
-
-  const mode = useModeStore((state) => state.mode);
+  const { layoutValue } = useLayout();
 
   const { isPhone } = useViewpoint();
 
-  const modeClassName = `header-mobile-${mode}`;
+  const menus = useMenu();
+
+  const modeClassName = `header-mobile-${layoutValue.layoutTheme}`;
 
   const mainClassName = utils.formatClassName("header-mobile", modeClassName);
 

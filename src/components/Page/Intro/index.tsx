@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { UI } from "@/components";
-import useThemeStore from "@/store/ThemeStore";
 import IntroContent from "./IntroContent";
 import IntroImage from "./IntroImage";
-import useModeStore from "@/store/ModeStore";
+import useThemeStore from "@/store/ThemeStore";
+import useLayout from "@/components/UI/Layout/useLayout";
 import utils from "@/utils";
 
 const { Grid, Navigating } = UI;
@@ -15,11 +15,11 @@ const { NavigateContent } = Navigating;
 interface IntroProps {}
 
 const Intro: FC<IntroProps> = () => {
+  const { layoutValue } = useLayout();
+
   const color = useThemeStore((state) => state.color);
 
-  const mode = useModeStore((state) => state.mode);
-
-  const modeClassName = `intro-${mode}`;
+  const modeClassName = `intro-${layoutValue.layoutTheme}`;
 
   const colorClassName = `intro-${color}`;
 

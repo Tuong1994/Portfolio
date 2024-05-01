@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Lang } from "@/common/lang";
 import { UI } from "@/components";
+import { BsDot } from "react-icons/bs";
 
 const { Typography, UList, Space, Divider } = UI;
 
@@ -40,10 +41,10 @@ const ExperiencesWork: FC<ExperiencesWorkProps> = ({ lang }) => {
         </ListItem>
       </List>
       <div className="work-project">
-        <Paragraph weight={600} rootClassName="project-title">
+        <Paragraph weight={600} size={16} rootClassName="project-title">
           {lang.experiences.firstCompany.project.title}
         </Paragraph>
-        <List>
+        <List icon={<BsDot size={20} />}>
           <ListItem>
             <Paragraph>{lang.experiences.firstCompany.project.name_1}</Paragraph>
           </ListItem>

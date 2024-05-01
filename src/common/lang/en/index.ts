@@ -1,4 +1,5 @@
 import about_en from "./about";
+import contact_en from "./contact";
 import experiences_en from "./experiences";
 import header_en from "./header";
 import intro_en from "./intro";
@@ -10,6 +11,7 @@ const en = {
   about: about_en,
   experiences: experiences_en,
   projects: projects_en,
+  contact: contact_en,
 };
 
 export type EN = typeof en;

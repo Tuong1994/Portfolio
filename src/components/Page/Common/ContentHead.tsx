@@ -2,7 +2,7 @@ import { ForwardRefRenderFunction, HTMLAttributes, forwardRef, ReactNode } from 
 import { Title } from "@/components/UI/Typography";
 import { TitleProps } from "@/components/UI/Typography/Title";
 import useThemeStore from "@/store/ThemeStore";
-import useModeStore from "@/store/ModeStore";
+import useLayout from "@/components/UI/Layout/useLayout";
 import utils from "@/utils";
 
 interface ContentHeadProps extends HTMLAttributes<HTMLDivElement> {
@@ -15,7 +15,7 @@ const ContentHead: ForwardRefRenderFunction<HTMLDivElement, ContentHeadProps> = 
   { rootClassName = "", children, titleProps, ...restProps },
   ref
 ) => {
-  const mode = useModeStore((state) => state.mode);
+  const { layoutValue } = useLayout();
 
   const color = useThemeStore((state) => state.color);
 
@@ -23,7 +23,7 @@ const ContentHead: ForwardRefRenderFunction<HTMLDivElement, ContentHeadProps> = 
 
   const colorClassName = `content-head-${color}`;
 
-  const modeClassName = `content-head-${mode}`;
+  const modeClassName = `content-head-${layoutValue.layoutTheme}`;
 
   const mainClassName = utils.formatClassName("content-head", colorClassName, modeClassName);
 

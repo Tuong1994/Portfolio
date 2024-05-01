@@ -3,8 +3,8 @@ import { UI } from "@/components";
 import { Lang } from "@/common/lang";
 import { InfoRow } from "@/components/UI";
 import { InfoRowProps } from "@/components/UI/InfoRow";
-import IconView from "../Common/IconView";
 import { ThemeColor } from "@/store/ThemeStore";
+import IconView from "../Common/IconView";
 
 const { Grid, Typography, UList, Image, Divider, Space, Button } = UI;
 

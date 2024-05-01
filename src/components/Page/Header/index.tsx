@@ -7,7 +7,7 @@ import HeaderTranslate from "./HeaderTranslate";
 import HeaderTheme from "./HeaderTheme";
 import HeaderAction from "./HeaderAction";
 import HeaderMobile from "./HeaderMobile";
-import useModeStore from "@/store/ModeStore";
+import useLayout from "@/components/UI/Layout/useLayout";
 import useSticky from "./useSticky";
 import utils from "@/utils";
 
@@ -20,11 +20,11 @@ interface HeaderProps {}
 const Header: FC<HeaderProps> = () => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const sticky = useSticky()
+  const { layoutValue } = useLayout();
 
-  const mode = useModeStore((state) => state.mode);
+  const sticky = useSticky();
 
-  const modeClassName = `header-${mode}`;
+  const modeClassName = `header-${layoutValue.layoutTheme}`;
 
   const stickyClassName = sticky ? "header-fixed" : "";
 

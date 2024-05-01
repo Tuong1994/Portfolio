@@ -1,5 +1,5 @@
 import { ForwardRefRenderFunction, HTMLAttributes, ReactNode, forwardRef } from "react";
-import useModeStore from "@/store/ModeStore";
+import useLayout from "@/components/UI/Layout/useLayout";
 import utils from "@/utils";
 
 interface ContentWrapperProps extends HTMLAttributes<HTMLDivElement> {
@@ -11,9 +11,9 @@ const ContentWrapper: ForwardRefRenderFunction<HTMLDivElement, ContentWrapperPro
   { rootClassName = "", children, ...restProps },
   ref
 ) => {
-  const mode = useModeStore((state) => state.mode);
+  const { layoutValue } = useLayout();
 
-  const modeClassName = `content-wrapper-${mode}`;
+  const modeClassName = `content-wrapper-${layoutValue.layoutTheme}`;
 
   const mainClassName = utils.formatClassName("content-wrapper", modeClassName, rootClassName);
 

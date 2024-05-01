@@ -1,0 +1,128 @@
+.contact {
+  .contact-info,
+  .contact-form {
+    padding: $p-2;
+    border-radius: $rounded-lg;
+    transition: all $transition-time-sm $transition-fn;
+  }
+  .contact-info {
+    border: 1px solid transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+    .info-card {
+      margin-bottom: $m-1;
+      .card-body {
+        padding: $p-1;
+      }
+      &:nth-child(4) {
+        margin-bottom: $m-5;
+      }
+    }
+    .info-icon {
+      transition: all $transition-time-sm $transition-fn;
+      * {
+        transition: all $transition-time-sm $transition-fn;
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  .contact-form {
+    border: 1px solid transparent;
+    border-left: transparent;
+    border-top: transparent;
+    .form-foot {
+      width: $w-full;
+      margin-top: $m-2;
+      .button {
+        width: $w-full;
+      }
+    }
+  }
+}
+
+// Color
+.contact-blue {
+  .contact-info,
+  .contact-form {
+    border-color: $bg-blue;
+  }
+  .info-icon {
+    * {
+      color: $text-blue;
+    }
+  }
+}
+
+.contact-red {
+  .contact-info,
+  .contact-form {
+    border-color: $bg-red;
+  }
+  .info-icon {
+    * {
+      color: $text-red;
+    }
+  }
+}
+
+.contact-green {
+  .contact-info,
+  .contact-form {
+    border-color: $bg-green;
+  }
+  .info-icon {
+    * {
+      color: $text-green;
+    }
+  }
+}
+
+.contact-orange {
+  .contact-info,
+  .contact-form {
+    border-color: $bg-orange;
+  }
+  .info-icon {
+    * {
+      color: $text-orange;
+    }
+  }
+}
+
+.contact-yellow {
+  .contact-info,
+  .contact-form {
+    border-color: $bg-yellow;
+  }
+  .info-icon {
+    * {
+      color: $text-yellow;
+    }
+  }
+}
+
+.contact-purple {
+  .contact-info,
+  .contact-form {
+    border-color: $bg-purple;
+  }
+  .info-icon {
+    * {
+      color: $text-purple;
+    }
+  }
+}
+
+.contact-pink {
+  .contact-info,
+  .contact-form {
+    border-color: $bg-pink;
+  }
+  .info-icon {
+    * {
+      color: $text-pink;
+    }
+  }
+}
