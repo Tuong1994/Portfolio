@@ -3,11 +3,11 @@ import { UI } from "@/components";
 import { Lang } from "@/common/lang";
 import IconView from "../Common/IconView";
 
-const { Image, Divider, Grid, Typography } = UI;
+const { Divider, Grid, Typography } = UI;
 
 const { Row, Col } = Grid;
 
-const { Title, Paragraph } = Typography;
+const { Title, } = Typography;
 
 interface AboutSkillsProps {
   lang: Lang;
