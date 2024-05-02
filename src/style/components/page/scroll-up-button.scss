@@ -1,0 +1,65 @@
+.scroll-up-button {
+  width: $w-4;
+  height: $h-4;
+  border: 1px solid transparent;
+  border-radius: $rounded-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 15;
+  opacity: 0;
+  transition: all $transition-time-sm $transition-fn;
+  * {
+    color: $text-white;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  @include respond(smTablet) {
+    bottom: 80px;
+  }
+}
+
+.scroll-up-button-show {
+  opacity: 1;
+  animation: fade $transition-time-sm $transition-fn;
+}
+
+// Color
+.scroll-up-button-blue {
+  background: $bg-blue;
+  border-color: $bg-blue;
+}
+
+.scroll-up-button-red {
+  background: $bg-red;
+  border-color: $bg-red;
+}
+
+.scroll-up-button-orange {
+  background: $bg-orange;
+  border-color: $bg-orange;
+}
+
+.scroll-up-button-green {
+  background: $bg-green;
+  border-color: $bg-green;
+}
+
+.scroll-up-button-yellow {
+  background: $bg-yellow;
+  border-color: $bg-yellow;
+}
+
+.scroll-up-button-purple {
+  background: $bg-purple;
+  border-color: $bg-purple;
+}
+
+.scroll-up-button-pink {
+  background: $bg-pink;
+  border-color: $bg-pink;
+}

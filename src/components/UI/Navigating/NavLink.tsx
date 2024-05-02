@@ -1,8 +1,8 @@
-import { ForwardRefRenderFunction, HTMLAttributes, ReactNode, forwardRef } from "react";
+import { ForwardRefRenderFunction, HTMLAttributes, ReactNode, MouseEvent, forwardRef } from "react";
+import { NavLinkColor } from "./type";
 import { smoothScroll } from "./smoothScroll";
 import useNavLink from "./useNavLink";
 import utils from "@/utils";
-import { NavLinkColor } from "./type";
 
 interface NavLinkProps extends HTMLAttributes<HTMLAnchorElement> {
   rootClassName?: string;
@@ -11,7 +11,7 @@ interface NavLinkProps extends HTMLAttributes<HTMLAnchorElement> {
 }
 
 const NavLink: ForwardRefRenderFunction<HTMLAnchorElement, NavLinkProps> = (
-  { rootClassName = "", children, id, linkColor = "blue", ...restProps },
+  { rootClassName = "", children, id, linkColor = "blue", onClick, ...restProps },
   ref
 ) => {
   const colorClassName = `navlink-${linkColor}`;
@@ -20,8 +20,13 @@ const NavLink: ForwardRefRenderFunction<HTMLAnchorElement, NavLinkProps> = (
 
   useNavLink();
 
+  const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    onClick?.(e);
+    smoothScroll(e);
+  };
+
   return (
-    <a ref={ref} {...restProps} href={`#${id}`} className={className} onClick={smoothScroll}>
+    <a ref={ref} {...restProps} href={`#${id}`} className={className} onClick={handleClick}>
       {children}
     </a>
   );

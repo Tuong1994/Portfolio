@@ -9,22 +9,28 @@ import Header from "./components/Page/Header";
 import Intro from "./components/Page/Intro";
 import Projects from "./components/Page/Projects";
 import "./style/main.scss";
+import ScrollUpButton from "./components/Page/ScrollUpButton";
 
 function App() {
   return (
-    <Container>
+    <Container style={{ overflowX: "hidden" }}>
       <Header />
+
       <ContentWrapper>
         <Intro />
         <About />
       </ContentWrapper>
+
       <Background />
+
       <ContentWrapper>
         <Experiences />
         <Projects />
         <Contact />
       </ContentWrapper>
+
       <ToastMessage />
+      <ScrollUpButton />
     </Container>
   );
 }

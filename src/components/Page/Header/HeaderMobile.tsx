@@ -14,7 +14,7 @@ const { NavLink } = Navigating;
 
 interface HeaderMobileProps extends DrawerProps {}
 
-const HeaderMobile: FC<HeaderMobileProps> = ({ ...restProps }) => {
+const HeaderMobile: FC<HeaderMobileProps> = ({ onClose, ...restProps }) => {
   const { layoutValue } = useLayout();
 
   const { isPhone } = useViewpoint();
@@ -25,10 +25,12 @@ const HeaderMobile: FC<HeaderMobileProps> = ({ ...restProps }) => {
 
   const mainClassName = utils.formatClassName("header-mobile", modeClassName);
 
+  const handleClose = () => onClose?.();
+
   return (
-    <Drawer hasHead={false} bodyClassName={mainClassName} {...restProps}>
+    <Drawer hasHead={false} bodyClassName={mainClassName} {...restProps} onClose={handleClose}>
       {menus.map((menu) => (
-        <NavLink key={menu.id} id={menu.id} rootClassName="mobile-link">
+        <NavLink key={menu.id} id={menu.id} rootClassName="mobile-link" onClick={handleClose}>
           {menu.title}
         </NavLink>
       ))}
