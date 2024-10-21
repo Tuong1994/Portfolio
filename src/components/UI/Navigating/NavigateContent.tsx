@@ -1,5 +1,5 @@
-import utils from "@/utils";
 import { ForwardRefRenderFunction, HTMLAttributes, ReactNode, forwardRef } from "react";
+import utils from "@/utils";
 
 interface NavigateContentProps extends HTMLAttributes<HTMLDivElement> {
   rootClassName?: string;

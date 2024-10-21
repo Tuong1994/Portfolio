@@ -24,6 +24,7 @@
         font-size: $text-md;
         font-weight: $font-semibold;
         color: $text-white;
+        transition: all $transition-time-xs $transition-fn;
       }
     }
     .tabs-content {
@@ -101,7 +102,7 @@
 // Color
 .projects-blue {
   .head-title-selected {
-    background: $bg-blue;
+    background: $bg-blue-gradient;
   }
   .projects-group {
     border-color: $bg-blue;
@@ -131,7 +132,7 @@
 
 .projects-red {
   .head-title-selected {
-    background: $bg-red;
+    background: $bg-red-gradient;
   }
   .projects-group {
     border-color: $bg-red;
@@ -161,7 +162,7 @@
 
 .projects-green {
   .head-title-selected {
-    background: $bg-green;
+    background: $bg-green-gradient;
   }
   .projects-group {
     border-color: $bg-green;
@@ -191,7 +192,7 @@
 
 .projects-orange {
   .head-title-selected {
-    background: $bg-orange;
+    background: $bg-orange-gradient;
   }
   .projects-group {
     border-color: $bg-orange;
@@ -221,7 +222,7 @@
 
 .projects-yellow {
   .head-title-selected {
-    background: $bg-yellow;
+    background: $bg-yellow-gradient;
   }
   .projects-group {
     border-color: $bg-yellow;
@@ -251,7 +252,7 @@
 
 .projects-purple {
   .head-title-selected {
-    background: $bg-purple;
+    background: $bg-purple-gradient;
   }
   .projects-group {
     border-color: $bg-purple;
@@ -281,7 +282,7 @@
 
 .projects-pink {
   .head-title-selected {
-    background: $bg-pink;
+    background: $bg-pink-gradient;
   }
   .projects-group {
     border-color: $bg-pink;

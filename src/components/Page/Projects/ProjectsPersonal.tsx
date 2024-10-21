@@ -71,7 +71,7 @@ const ProjectsPersonal: FC<ProjectsPersonalProps> = ({ lang, color }) => {
     return (
       <Space>
         {techs.map((tech) => (
-          <IconView key={tech} src={`/dev/${tech}.svg`} hasHover={false} iconWidth={30} iconHeight={30} />
+          <IconView key={tech} src={`/dev/${tech}.svg`} hasHover={false} iconWidth={25} iconHeight={25} borderWidth={5} />
         ))}
       </Space>
     );

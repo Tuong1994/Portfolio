@@ -1,13 +1,23 @@
 .icon-view {
-  background: $bg-white;
   border-radius: $rounded-full;
-  border-style: solid;
-  border-color: transparent;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   transition: all $transition-time-sm $transition-fn;
+  .image {
+    position: relative;
+    z-index: 1;
+  }
+  .icon-view-circle {
+    background: $bg-white;
+    border-radius: $rounded-full;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .icon-view-name {
@@ -24,29 +34,29 @@
 
 // Color
 .icon-view-blue {
-  border-color: $bg-blue;
+  background: $bg-blue-gradient;
 }
 
 .icon-view-red {
-  border-color: $bg-red;
+  background: $bg-red-gradient;
 }
 
 .icon-view-green {
-  border-color: $bg-green;
+  background: $bg-green-gradient;
 }
 
 .icon-view-orange {
-  border-color: $bg-orange;
+  background: $bg-orange-gradient;
 }
 
 .icon-view-yellow {
-  border-color: $bg-yellow;
+  background: $bg-yellow-gradient;
 }
 
 .icon-view-purple {
-  border-color: $bg-purple;
+  background: $bg-purple-gradient;
 }
 
 .icon-view-pink {
-  border-color: $bg-pink;
+  background: $bg-pink-gradient;
 }

@@ -7,9 +7,15 @@ const contact_en = {
     email: "Email",
     message: "Message",
   },
+  placeholder: {
+    fullName: "Ex: Jack Williams",
+    phone: "Ex: 090135xxxx",
+    email: "Ex: example@email.com",
+    message: "Send me your thought",
+  },
   action: "Send email",
   messageSuccess: "Email has been sent",
-  messageError: "Lỗi! Không thể gửi email",
+  messageError: "Error! Can not send email",
 };
 
 export default contact_en;

@@ -26,8 +26,9 @@ function App() {
       <ContentWrapper>
         <Experiences />
         <Projects />
-        <Contact />
       </ContentWrapper>
+      
+      <Contact />
 
       <ToastMessage />
       <ScrollUpButton />

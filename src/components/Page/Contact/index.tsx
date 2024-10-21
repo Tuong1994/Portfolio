@@ -8,6 +8,7 @@ import useLang from "@/hooks/useLang";
 import useThemeStore from "@/store/ThemeStore";
 import useReveal from "@/hooks/useReveal";
 import utils from "@/utils";
+import { TitleProps } from "@/components/UI/Typography/Title";
 
 const { CONTACT } = linkId;
 
@@ -28,6 +29,8 @@ const Contact: FC<ContactProps> = () => {
 
   const color = useThemeStore((state) => state.color);
 
+  const headTitleProps: TitleProps = { rootClassName: "contact-title" };
+
   const colorClassName = `contact-${color}`;
 
   const revealClassName = reveal ? "contact-reveal" : "";
@@ -36,7 +39,7 @@ const Contact: FC<ContactProps> = () => {
 
   return (
     <NavigateContent ref={contactRef} id={CONTACT} rootClassName={mainClassName}>
-      <ContentHead>{lang.header.menu.contact}</ContentHead>
+      <ContentHead hasUnderline={false} titleProps={headTitleProps}>{lang.header.menu.contact}</ContentHead>
       <Row justify="center" rootClassName="contact-content">
         <Col xs={24} md={12} lg={12} span={10}>
           <ContactInfo lang={lang} />

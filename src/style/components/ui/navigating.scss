@@ -15,71 +15,71 @@
 // Color hover
 .navlink-blue {
   &:hover {
-    background: $bg-blue;
+    background: $bg-blue-gradient;
   }
 }
 
 .navlink-red {
   &:hover {
-    background: $bg-red;
+    background: $bg-red-gradient;
   }
 }
 
 .navlink-green {
   &:hover {
-    background: $bg-green;
+    background: $bg-green-gradient;
   }
 }
 
 .navlink-orange {
   &:hover {
-    background: $bg-orange;
+    background: $bg-orange-gradient;
   }
 }
 
 .navlink-yellow {
   &:hover {
-    background: $bg-yellow;
+    background: $bg-yellow-gradient;
   }
 }
 
 .navlink-pink {
   &:hover {
-    background: $bg-pink;
+    background: $bg-pink-gradient;
   }
 }
 
 .navlink-purple {
   &:hover {
-    background: $bg-purple;
+    background: $bg-purple-gradient;
   }
 }
 
 // Color active
 .navlink-blue.navlink-active {
-  background: $bg-blue;
+  background: $bg-blue-gradient;
 }
 
 .navlink-red.navlink-active {
-  background: $bg-red;
+  background: $bg-red-gradient;
 }
 
 .navlink-green.navlink-active {
-  background: $bg-green;
+  background: $bg-green-gradient;
 }
 
 .navlink-orange.navlink-active {
-  background: $bg-orange;
+  background: $bg-orange-gradient;
 }
 
 .navlink-yellow.navlink-active {
-  background: $bg-yellow;
+  background: $bg-yellow-gradient;
 }
 
 .navlink-pink.navlink-active {
-  background: $bg-pink;
+  background: $bg-pink-gradient;
 }
 
 .navlink-purple.navlink-active {
-  background: $bg-purple;
+  background: $bg-purple-gradient;
 }

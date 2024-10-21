@@ -88,7 +88,7 @@
 }
 
 .button-blue {
-  background: $bg-blue;
+  background: $bg-blue-gradient;
   border-color: $bg-blue;
   &::after {
     background: $bg-blue-rgba-xs;
@@ -96,7 +96,7 @@
 }
 
 .button-red {
-  background: $bg-red;
+  background: $bg-red-gradient;
   border-color: $bg-red;
   &::after {
     background: $bg-red-rgba-xs;
@@ -104,7 +104,7 @@
 }
 
 .button-green {
-  background: $bg-green;
+  background: $bg-green-gradient;
   border-color: $bg-green;
   &::after {
     background: $bg-green-rgba-xs;
@@ -112,7 +112,7 @@
 }
 
 .button-orange {
-  background: $bg-orange;
+  background: $bg-orange-gradient;
   border-color: $bg-orange;
   &::after {
     background: $bg-orange-rgba-xs;
@@ -120,7 +120,7 @@
 }
 
 .button-yellow {
-  background: $bg-yellow;
+  background: $bg-yellow-gradient;
   border-color: $bg-yellow;
   &::after {
     background: $bg-yellow-rgba-xs;
@@ -128,7 +128,7 @@
 }
 
 .button-purple {
-  background: $bg-purple;
+  background: $bg-purple-gradient;
   border-color: $bg-purple;
   &::after {
     background: $bg-purple-rgba-xs;
@@ -136,7 +136,7 @@
 }
 
 .button-pink {
-  background: $bg-pink;
+  background: $bg-pink-gradient;
   border-color: $bg-pink;
   &::after {
     background: $bg-pink-rgba-xs;

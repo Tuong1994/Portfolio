@@ -15,6 +15,7 @@ const { Paragraph } = Typography;
 interface IconViewProps extends GridRowProps {
   iconWidth?: number;
   iconHeight?: number;
+  borderWidth?: number;
   iconName?: string;
   hasHover?: boolean;
   src?: ImageProps["src"];
@@ -24,8 +25,9 @@ interface IconViewProps extends GridRowProps {
 
 const IconView: ForwardRefRenderFunction<HTMLDivElement, IconViewProps> = ({
   src,
-  iconWidth = 100,
-  iconHeight = 100,
+  iconWidth = 80,
+  iconHeight = 80,
+  borderWidth = 20,
   hasHover = true,
   iconName,
   imageProps,
@@ -36,8 +38,8 @@ const IconView: ForwardRefRenderFunction<HTMLDivElement, IconViewProps> = ({
 
   const imageDefaultProps: ImageProps = {
     src,
-    imgWidth: iconWidth / 2,
-    imgHeight: iconHeight / 2,
+    imgWidth: iconWidth / 1.5,
+    imgHeight: iconHeight / 1.5,
     ...imageProps,
   };
 
@@ -49,9 +51,13 @@ const IconView: ForwardRefRenderFunction<HTMLDivElement, IconViewProps> = ({
   };
 
   const iconStyle: CSSProperties = {
+    width: `${iconWidth + borderWidth}px`,
+    height: `${iconHeight + borderWidth}px`,
+  };
+
+  const innerCircleStyle: CSSProperties = {
     width: `${iconWidth}px`,
     height: `${iconHeight}px`,
-    borderWidth: `${iconWidth / 10 < 1 ? 1 : iconWidth / 10}px`,
   };
 
   const colorClassName = `icon-view-${color}`;
@@ -65,6 +71,7 @@ const IconView: ForwardRefRenderFunction<HTMLDivElement, IconViewProps> = ({
       <Col>
         <div style={iconStyle} className={iconClassName}>
           <Image {...imageDefaultProps} />
+          <div style={innerCircleStyle} className="icon-view-circle" />
         </div>
         {iconName && <Paragraph {...nameDefaultProps}>{iconName}</Paragraph>}
       </Col>

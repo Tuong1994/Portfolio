@@ -5,6 +5,7 @@ import { ThemeColor } from "@/store/ThemeStore";
 import useForm from "@/components/Control/Form/useForm";
 import useMessage from "@/components/UI/ToastMessage/useMessage";
 import emailjs from "@emailjs/browser";
+import useRule from "@/hooks/useRule";
 
 const { Button } = UI;
 
@@ -28,6 +29,8 @@ const ContactForm: FC<ContactFormProps> = ({ lang, color }) => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const form = useForm();
+
+  const { email, phone, common } = useRule();
 
   const initialData: FormData = {
     fullName: "",
@@ -64,17 +67,17 @@ const ContactForm: FC<ContactFormProps> = ({ lang, color }) => {
         initialData={initialData}
         onFinish={handleSendEmail}
       >
-        <FormItem name="fullName">
-          <Input label={lang.contact.label.fullName} />
+        <FormItem name="fullName" rules={common()}>
+          <Input label={lang.contact.label.fullName} placeholder={lang.contact.placeholder.fullName} />
         </FormItem>
-        <FormItem name="phone">
-          <InputPhone label={lang.contact.label.phone} />
+        <FormItem name="phone" rules={phone()}>
+          <InputPhone label={lang.contact.label.phone} placeholder={lang.contact.placeholder.phone} />
         </FormItem>
-        <FormItem name="email">
-          <Input label={lang.contact.label.email} />
+        <FormItem name="email" rules={email()}>
+          <Input label={lang.contact.label.email} placeholder={lang.contact.placeholder.email} />
         </FormItem>
         <FormItem name="message">
-          <TextArea label={lang.contact.label.message} />
+          <TextArea label={lang.contact.label.message} placeholder={lang.contact.placeholder.message} />
         </FormItem>
         <div className="form-foot">
           <Button sizes="lg" loading={loading}>

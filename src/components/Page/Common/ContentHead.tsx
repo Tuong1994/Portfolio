@@ -12,12 +12,13 @@ type Ref = {
 
 interface ContentHeadProps extends HTMLAttributes<HTMLDivElement> {
   rootClassName?: string;
+  hasUnderline?: boolean;
   titleProps?: TitleProps;
   children?: ReactNode;
 }
 
 const ContentHead: FC<ContentHeadProps> = (
-  { rootClassName = "", children, titleProps, ...restProps },
+  { rootClassName = "", hasUnderline = true, children, titleProps, ...restProps },
   ref: ForwardedRef<Ref>
 ) => {
   const { layoutValue } = useLayout();
@@ -43,8 +44,8 @@ const ContentHead: FC<ContentHeadProps> = (
   return (
     <div ref={headRef} {...restProps} className={mainClassName}>
       <Title {...titleDefaultProps}>{children}</Title>
-      <div className="head-line-long" />
-      <div className="head-line-short" />
+      {hasUnderline && <div className="head-line-long" />}
+      {hasUnderline && <div className="head-line-short" />}
     </div>
   );
 };

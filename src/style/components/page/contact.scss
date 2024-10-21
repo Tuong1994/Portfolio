@@ -1,10 +1,16 @@
 .contact {
+  padding: $p-5 $p-5 * 2;
+  transition: background $transition-time-sm $transition-fn;
+  .contact-title {
+    color: $text-white;
+  }
   .contact-content {
     opacity: 0;
     transition: all $transition-time-md $transition-fn;
   }
   .contact-info,
   .contact-form {
+    background: $bg-white;
     padding: $p-2;
     border-radius: $rounded-lg;
     transition: all $transition-time-sm $transition-fn;
@@ -17,9 +23,13 @@
       margin-bottom: $m-1;
       .card-body {
         padding: $p-1;
+        border-color: transparent;
       }
       &:nth-child(4) {
         margin-bottom: $m-5;
+      }
+      & * {
+        color: $text-white;
       }
     }
     .info-icon {
@@ -44,6 +54,12 @@
       }
     }
   }
+  @include respond(laptop) {
+    padding: $p-5;
+  }
+  @include respond(smTablet) {
+    padding: $p-1;
+  }
 }
 
 .contact-reveal {
@@ -54,9 +70,16 @@
 
 // Color
 .contact-blue {
+  background: $bg-blue-gradient;
   .contact-info,
   .contact-form {
     border-color: $bg-blue;
+  }
+  .info-card {
+    .card-body {
+      background: $bg-blue-gradient;
+      border-color: $bg-blue;
+    }
   }
   .info-icon {
     * {
@@ -66,9 +89,16 @@
 }
 
 .contact-red {
+  background: $bg-red-gradient;
   .contact-info,
   .contact-form {
     border-color: $bg-red;
+  }
+  .info-card {
+    .card-body {
+      background: $bg-red-gradient;
+      border-color: $bg-red;
+    }
   }
   .info-icon {
     * {
@@ -78,9 +108,16 @@
 }
 
 .contact-green {
+  background: $bg-green-gradient;
   .contact-info,
   .contact-form {
     border-color: $bg-green;
+  }
+  .info-card {
+    .card-body {
+      background: $bg-green-gradient;
+      border-color: $bg-green;
+    }
   }
   .info-icon {
     * {
@@ -90,9 +127,16 @@
 }
 
 .contact-orange {
+  background: $bg-orange-gradient;
   .contact-info,
   .contact-form {
     border-color: $bg-orange;
+  }
+  .info-card {
+    .card-body {
+      background: $bg-orange-gradient;
+      border-color: $bg-orange;
+    }
   }
   .info-icon {
     * {
@@ -102,9 +146,16 @@
 }
 
 .contact-yellow {
+  background: $bg-yellow-gradient;
   .contact-info,
   .contact-form {
     border-color: $bg-yellow;
+  }
+  .info-card {
+    .card-body {
+      background: $bg-yellow-gradient;
+      border-color: $bg-yellow;
+    }
   }
   .info-icon {
     * {
@@ -114,9 +165,16 @@
 }
 
 .contact-purple {
+  background: $bg-purple-gradient;
   .contact-info,
   .contact-form {
     border-color: $bg-purple;
+  }
+  .info-card {
+    .card-body {
+      background: $bg-purple-gradient;
+      border-color: $bg-purple;
+    }
   }
   .info-icon {
     * {
@@ -126,9 +184,16 @@
 }
 
 .contact-pink {
+  background: $bg-pink-gradient;
   .contact-info,
   .contact-form {
     border-color: $bg-pink;
+  }
+  .info-card {
+    .card-body {
+      background: $bg-pink-gradient;
+      border-color: $bg-pink;
+    }
   }
   .info-icon {
     * {

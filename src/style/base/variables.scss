@@ -5,8 +5,8 @@ $bg-gray: #d1d5db;
 $bg-blue: #0ea5e9;
 $bg-red: #f43f5e;
 $bg-green: #10b981;
-$bg-orange: #f59e0b;
-$bg-yellow: #eab308;
+$bg-orange: #f5a316;
+$bg-yellow: #ffe601;
 $bg-purple: #6366f1;
 $bg-pink: #ec4899;
 $bg-deep-blue: #1e293b;
@@ -37,15 +37,15 @@ $bg-green-rgba-sm: rgba(16, 185, 129, 0.4);
 $bg-green-rgba-md: rgba(16, 185, 129, 0.6);
 $bg-green-rgba-lg: rgba(16, 185, 129, 0.8);
 
-$bg-orange-rgba-xs: rgba(245, 158, 11, 0.2);
-$bg-orange-rgba-sm: rgba(245, 158, 11, 0.4);
-$bg-orange-rgba-md: rgba(245, 158, 11, 0.6);
-$bg-orange-rgba-lg: rgba(245, 158, 11, 0.8);
+$bg-orange-rgba-xs: rgba(245, 163, 22, 0.2);
+$bg-orange-rgba-sm: rgba(245, 163, 22, 0.4);
+$bg-orange-rgba-md: rgba(245, 163, 22, 0.6);
+$bg-orange-rgba-lg: rgba(245, 163, 22, 0.8);
 
-$bg-yellow-rgba-xs: rgba(234, 179, 8, 0.2);
-$bg-yellow-rgba-sm: rgba(234, 179, 8, 0.4);
-$bg-yellow-rgba-md: rgba(234, 179, 8, 0.6);
-$bg-yellow-rgba-lg: rgba(234, 179, 8, 0.8);
+$bg-yellow-rgba-xs: rgba(255, 230, 1, 0.2);
+$bg-yellow-rgba-sm: rgba(255, 230, 1, 0.4);
+$bg-yellow-rgba-md: rgba(255, 230, 1, 0.6);
+$bg-yellow-rgba-lg: rgba(255, 230, 1, 0.8);
 
 $bg-purple-rgba-xs: rgba(99, 102, 241, 0.2);
 $bg-purple-rgba-sm: rgba(99, 102, 241, 0.4);
@@ -57,6 +57,14 @@ $bg-pink-rgba-sm: rgba(236, 72, 153, 0.4);
 $bg-pink-rgba-md: rgba(236, 72, 153, 0.6);
 $bg-pink-rgba-lg: rgba(236, 72, 153, 0.8);
 
+$bg-blue-gradient: linear-gradient(to right, #0ea5e9, #0081bd);
+$bg-red-gradient: linear-gradient(to right, #f43f5e, #ce0022);
+$bg-green-gradient: linear-gradient(to right, #10b981, #009463);
+$bg-orange-gradient: linear-gradient(to right, #f5a316, #dd8c00);
+$bg-yellow-gradient: linear-gradient(to right, #ffe601, #d8c200);
+$bg-purple-gradient: linear-gradient(to right, #6366f1, #3034fa);
+$bg-pink-gradient: linear-gradient(to right, #ec4899, #dd006f);
+
 $text-black: #111;
 $text-white: #fff;
 $text-slate: #cbd5e1;
@@ -64,8 +72,8 @@ $text-gray: #9ca3af;
 $text-blue: #0ea5e9;
 $text-red: #f43f5e;
 $text-green: #10b981;
-$text-orange: #f59e0b;
-$text-yellow: #eab308;
+$text-orange: #f5a316;
+$text-yellow: #ffe601;
 $text-purple: #6366f1;
 $text-pink: #ec4899;
 
