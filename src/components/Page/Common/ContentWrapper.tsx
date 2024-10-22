@@ -18,9 +18,9 @@ const ContentWrapper: ForwardRefRenderFunction<HTMLDivElement, ContentWrapperPro
   const mainClassName = utils.formatClassName("content-wrapper", modeClassName, rootClassName);
 
   return (
-    <main ref={ref} {...restProps} className={mainClassName}>
+    <div ref={ref} {...restProps} className={mainClassName}>
       {children}
-    </main>
+    </div>
   );
 };
 

@@ -1,7 +1,8 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { Lang } from "@/common/lang";
 import { UI } from "@/components";
 import { BsDot } from "react-icons/bs";
+import SectionCard from "../Common/SectionCard";
 
 const { Typography, UList, Space, Divider } = UI;
 
@@ -14,8 +15,8 @@ interface ExperiencesWorkProps {
 }
 
 const ExperiencesWork: FC<ExperiencesWorkProps> = ({ lang }) => {
-  return (
-    <div className="experiences-work">
+  const head = (
+    <Fragment>
       <Paragraph weight={600} size={16}>
         Fresher ReactJs Developer
       </Paragraph>
@@ -28,7 +29,11 @@ const ExperiencesWork: FC<ExperiencesWorkProps> = ({ lang }) => {
           10/2021 - 03/2023
         </Paragraph>
       </Space>
-      <Divider />
+    </Fragment>
+  );
+
+  return (
+    <SectionCard head={head} rootClassName="experiences-work">
       <List>
         <ListItem>
           <Paragraph size={16}>{lang.experiences.firstCompany.content_1}</Paragraph>
@@ -62,7 +67,7 @@ const ExperiencesWork: FC<ExperiencesWorkProps> = ({ lang }) => {
           </ListItem>
         </List>
       </div>
-    </div>
+    </SectionCard>
   );
 };
 

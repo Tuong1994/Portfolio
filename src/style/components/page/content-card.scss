@@ -1,0 +1,92 @@
+.content-card {
+  padding: $p-2;
+  background: $bg-slate;
+  border-top-left-radius: $rounded;
+  border-top-right-radius: $rounded-xl;
+  border-bottom-right-radius: $rounded;
+  border-bottom-left-radius: $rounded-xl;
+  box-shadow: 0 0 10px $bg-slate;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all $transition-time-sm $transition-fn;
+  &::after {
+    content: "";
+    width: $w-10 * 2;
+    height: $h-full;
+    transform: skewX(-20deg);
+    position: absolute;
+    top: 0;
+    left: -10rem;
+    z-index: -1;
+    transition: all $transition-time-sm $transition-fn;
+    @include respond(mdPhone) {
+      left: 80%;
+    }
+  }
+  &:hover::after {
+    left: 80%;
+  }
+  .content-card-head {
+    padding: $p-1;
+    margin-bottom: $m-2;
+    border-radius: $rounded-lg;
+    background: $bg-white;
+  }
+}
+
+// Mode
+.content-card-dark {
+  background: $bg-deep-blue;
+  box-shadow: 0 0 10px $bg-black;
+}
+
+// Color
+.content-card-blue {
+  &::after {
+    background: $bg-blue-gradient;
+    box-shadow: 0 0 5px $bg-blue;
+  }
+}
+
+.content-card-red {
+  &::after {
+    background: $bg-red-gradient;
+    box-shadow: 0 0 5px $bg-red;
+  }
+}
+
+.content-card-green {
+  &::after {
+    background: $bg-green-gradient;
+    box-shadow: 0 0 5px $bg-green;
+  }
+}
+
+.content-card-orange {
+  &::after {
+    background: $bg-orange-gradient;
+    box-shadow: 0 0 5px $bg-orange;
+  }
+}
+
+.content-card-yellow {
+  &::after {
+    background: $bg-yellow-gradient;
+    box-shadow: 0 0 5px $bg-yellow;
+  }
+}
+
+.content-card-purple {
+  &::after {
+    background: $bg-purple-gradient;
+    box-shadow: 0 0 5px $bg-purple;
+  }
+}
+
+.content-card-pink {
+  &::after {
+    background: $bg-pink-gradient;
+    box-shadow: 0 0 5px $bg-pink;
+  }
+}

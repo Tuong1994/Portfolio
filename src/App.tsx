@@ -8,8 +8,8 @@ import Experiences from "./components/Page/Experiences";
 import Header from "./components/Page/Header";
 import Intro from "./components/Page/Intro";
 import Projects from "./components/Page/Projects";
-import "./style/main.scss";
 import ScrollUpButton from "./components/Page/ScrollUpButton";
+import "./style/main.scss";
 
 function App() {
   return (

@@ -1,6 +1,7 @@
 import { FC, Fragment } from "react";
 import { UI } from "@/components";
 import { Lang } from "@/common/lang";
+import ContentCard from "../Common/ContentCard";
 
 const { Typography, UList, Space, Image, Divider } = UI;
 
@@ -16,7 +17,7 @@ const AboutEducation: FC<AboutEducationProps> = ({ lang }) => {
   return (
     <Fragment>
       <Title level={3}>{lang.about.education.title}</Title>
-      <div className="about-education">
+      <ContentCard className="about-education">
         <Space align="middle">
           <Image imgWidth={50} imgHeight={50} src="/cybersoft.jpg" />
           <Paragraph weight={600} size={18}>
@@ -38,7 +39,7 @@ const AboutEducation: FC<AboutEducationProps> = ({ lang }) => {
             </Space>
           </ListItem>
         </List>
-      </div>
+      </ContentCard>
     </Fragment>
   );
 };

@@ -1,0 +1,131 @@
+.section-card {
+  padding-left: $p-5;
+  border-left: 4px solid transparent;
+  border-top-left-radius: $rounded;
+  border-bottom-left-radius: $rounded-lg;
+  transition: all $transition-time-sm $transition-fn;
+  .card-wrap {
+    padding: $p-2;
+    background: $bg-white;
+    border-top-left-radius: $rounded;
+    border-top-right-radius: $rounded-xl;
+    border-bottom-right-radius: $rounded;
+    border-bottom-left-radius: $rounded-xl;
+    box-shadow: 0 0 10px $bg-gray;
+    transition: all $transition-time-sm $transition-fn;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      width: $w-10 * 3;
+      height: $h-full;
+      transform: skewX(-20deg);
+      position: absolute;
+      top: 0;
+      right: -10rem;
+      z-index: -1;
+      transition: all $transition-time-sm $transition-fn;
+      @include respond(mdPhone) {
+        content: unset;
+      }
+    }
+    .wrap-head {
+      padding: $p-1;
+      margin-bottom: $m-2;
+      background: $bg-deep-blue;
+      border-radius: $rounded-lg;
+      transition: all $transition-time-sm $transition-fn;
+      & * {
+        color: $text-white;
+      }
+    }
+  }
+  @include respond(mdPhone) {
+    padding-left: $p-1;
+  }
+}
+
+.section-card-dark {
+  .card-wrap {
+    box-shadow: 0 0 10px $bg-black;
+    background: $bg-deep-blue;
+    .wrap-head {
+      background: $bg-white;
+      & * {
+        color: $text-black;
+      }
+    }
+  }
+}
+
+// Color
+.section-card-blue {
+  border-color: $bg-blue;
+  .card-wrap {
+    &::after {
+      background: $bg-blue-gradient;
+      box-shadow: 0 0 5px $bg-blue;
+    }
+  }
+}
+
+.section-card-red {
+  border-color: $bg-red;
+  .card-wrap {
+    &::after {
+      background: $bg-red-gradient;
+      box-shadow: 0 0 5px $bg-red;
+    }
+  }
+}
+
+.section-card-green {
+  border-color: $bg-green;
+  .card-wrap {
+    &::after {
+      background: $bg-green-gradient;
+      box-shadow: 0 0 5px $bg-green;
+    }
+  }
+}
+
+.section-card-orange {
+  border-color: $bg-orange;
+  .card-wrap {
+    &::after {
+      background: $bg-orange-gradient;
+      box-shadow: 0 0 5px $bg-orange;
+    }
+  }
+}
+
+.section-card-yellow {
+  border-color: $bg-yellow;
+  .card-wrap {
+    &::after {
+      background: $bg-yellow-gradient;
+      box-shadow: 0 0 5px $bg-yellow;
+    }
+  }
+}
+
+.section-card-purple {
+  border-color: $bg-purple;
+  .card-wrap {
+    &::after {
+      background: $bg-purple-gradient;
+      box-shadow: 0 0 5px $bg-purple;
+    }
+  }
+}
+
+.section-card-pink {
+  border-color: $bg-pink;
+  .card-wrap {
+    &::after {
+      background: $bg-pink-gradient;
+      box-shadow: 0 0 5px $bg-pink;
+    }
+  }
+}

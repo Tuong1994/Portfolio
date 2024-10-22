@@ -1,9 +1,6 @@
 .experiences {
   .experiences-work {
     opacity: 0;
-    padding: $p-1;
-    padding-left: $p-5;
-    border-left: 4px solid transparent;
     transform: translateX(10rem);
     transition: all $transition-time-md $transition-fn;
     .work-company {
@@ -11,6 +8,7 @@
     }
     .work-project {
       margin-top: $m-1;
+      margin-right: $m-5 * 4;
       padding: $p-1;
       border-radius: $rounded-lg;
       border-top: 1px solid transparent;
@@ -19,9 +17,9 @@
       .project-title {
         margin-bottom: $m-1;
       }
-    }
-    @include respond(mdPhone) {
-      padding-left: $p-2;
+      @include respond(mdPhone) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -35,7 +33,6 @@
 
 .experiences-blue {
   .experiences-work {
-    border-color: $bg-blue;
     .work-company {
       color: $text-blue;
     }
@@ -47,7 +44,6 @@
 
 .experiences-red {
   .experiences-work {
-    border-color: $bg-red;
     .work-company {
       color: $text-red;
     }
@@ -59,7 +55,6 @@
 
 .experiences-green {
   .experiences-work {
-    border-color: $bg-green;
     .work-company {
       color: $text-green;
     }
@@ -71,7 +66,6 @@
 
 .experiences-orange {
   .experiences-work {
-    border-color: $bg-orange;
     .work-company {
       color: $text-orange;
     }
@@ -83,7 +77,6 @@
 
 .experiences-yellow {
   .experiences-work {
-    border-color: $bg-yellow;
     .work-company {
       color: $text-yellow;
     }
@@ -95,7 +88,6 @@
 
 .experiences-purple {
   .experiences-work {
-    border-color: $bg-purple;
     .work-company {
       color: $text-purple;
     }
@@ -107,7 +99,6 @@
 
 .experiences-pink {
   .experiences-work {
-    border-color: $bg-pink;
     .work-company {
       color: $text-pink;
     }
