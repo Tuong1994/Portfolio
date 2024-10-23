@@ -4,7 +4,7 @@ import { UI } from "@/components";
 import { BsDot } from "react-icons/bs";
 import SectionCard from "../Common/SectionCard";
 
-const { Typography, UList, Space, Divider } = UI;
+const { Typography, UList, Space } = UI;
 
 const { Paragraph } = Typography;
 
