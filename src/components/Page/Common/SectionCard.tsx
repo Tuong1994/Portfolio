@@ -7,10 +7,12 @@ interface SectionCardProps {
   rootClassName?: string;
   head?: ReactNode;
   children?: ReactNode;
+  hasBackground?: boolean;
+  hasBorder?: boolean;
 }
 
 const SectionCard: ForwardRefRenderFunction<HTMLDivElement, SectionCardProps> = (
-  { rootClassName = "", head, children, ...restProps },
+  { rootClassName = "", head, children, hasBackground = true, hasBorder = true, ...restProps },
   ref
 ) => {
   const color = useThemeStore((state) => state.color);
@@ -21,7 +23,18 @@ const SectionCard: ForwardRefRenderFunction<HTMLDivElement, SectionCardProps> = 
 
   const modeClassName = `section-card-${layoutTheme}`;
 
-  const mainClassName = utils.formatClassName("section-card", colorClassName, modeClassName, rootClassName);
+  const backGroundClassName = hasBackground ? "section-card-background" : "";
+
+  const borderClassName = hasBorder ? "section-card-bordered" : "";
+
+  const mainClassName = utils.formatClassName(
+    "section-card",
+    borderClassName,
+    colorClassName,
+    modeClassName,
+    backGroundClassName,
+    rootClassName
+  );
 
   return (
     <div ref={ref} {...restProps} className={mainClassName}>

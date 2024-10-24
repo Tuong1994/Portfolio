@@ -1,8 +1,4 @@
 .section-card {
-  padding-left: $p-5;
-  border-left: 4px solid transparent;
-  border-top-left-radius: $rounded;
-  border-bottom-left-radius: $rounded-lg;
   transition: all $transition-time-sm $transition-fn;
   .card-wrap {
     padding: $p-2;
@@ -16,6 +12,31 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    .wrap-head {
+      padding: $p-1;
+      margin-bottom: $m-2;
+      background: $bg-deep-blue;
+      border-radius: $rounded-lg;
+      transition: all $transition-time-sm $transition-fn;
+      & * {
+        color: $text-white;
+      }
+    }
+  }
+}
+
+.section-card-bordered {
+  padding-left: $p-5;
+  border-left: 4px solid transparent;
+  border-top-left-radius: $rounded;
+  border-bottom-left-radius: $rounded-lg;
+  @include respond(mdPhone) {
+    padding-left: $p-1;
+  }
+}
+
+.section-card-background {
+  .card-wrap {
     &::after {
       content: "";
       width: $w-10 * 3;
@@ -30,19 +51,6 @@
         content: unset;
       }
     }
-    .wrap-head {
-      padding: $p-1;
-      margin-bottom: $m-2;
-      background: $bg-deep-blue;
-      border-radius: $rounded-lg;
-      transition: all $transition-time-sm $transition-fn;
-      & * {
-        color: $text-white;
-      }
-    }
-  }
-  @include respond(mdPhone) {
-    padding-left: $p-1;
   }
 }
 

@@ -1,8 +1,10 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { UI } from "@/components";
 import { Lang } from "@/common/lang";
 import { InfoRowProps } from "@/components/UI/InfoRow";
 import IconView from "../Common/IconView";
+import SectionCard from "../Common/SectionCard";
+import ContentCard from "../Common/ContentCard";
 
 const { Typography, Grid, Divider, InfoRow, Space } = UI;
 
@@ -56,7 +58,14 @@ const ProjectsCompany: FC<ProjectsCompanyProps> = ({ lang }) => {
     return (
       <Space>
         {techs.map((tech) => (
-          <IconView key={tech} src={`/dev/${tech}.svg`} hasHover={false} iconWidth={25} iconHeight={25} borderWidth={5} />
+          <IconView
+            key={tech}
+            src={`/dev/${tech}.svg`}
+            hasHover={false}
+            iconWidth={25}
+            iconHeight={25}
+            borderWidth={5}
+          />
         ))}
       </Space>
     );
@@ -64,17 +73,16 @@ const ProjectsCompany: FC<ProjectsCompanyProps> = ({ lang }) => {
 
   const renderFeatures = () => {
     return features.map((feature) => (
-      <Col key={feature.id} xs={24} md={12} lg={12} span={8}>
-        <div className="group-card">
-          <Paragraph weight={600}>{feature.title}</Paragraph>
+      <Col key={feature.id} xs={24} md={12} lg={12} span={12}>
+        <ContentCard rootClassName="features-card" head={<Paragraph weight={600}>{feature.title}</Paragraph>}>
           <Paragraph>{feature.description}</Paragraph>
-        </div>
+        </ContentCard>
       </Col>
     ));
   };
 
-  return (
-    <div className="projects-group">
+  const head = (
+    <Fragment>
       <Space align="middle">
         <Paragraph size={18} weight={600} rootClassName="group-name">
           {lang.projects.company.project}
@@ -82,15 +90,21 @@ const ProjectsCompany: FC<ProjectsCompanyProps> = ({ lang }) => {
         <span>-</span>
         <Paragraph size={16}>CNV Loyalty</Paragraph>
       </Space>
-      <Divider />
+    </Fragment>
+  );
+
+  return (
+    <SectionCard head={head} hasBackground={false} rootClassName="projects-group">
       <InfoRow {...infoRowProps} label={lang.projects.description} text={lang.projects.company.description} />
       <InfoRow {...infoRowProps} label={lang.projects.tech} text={renderTechs()} />
       <Divider />
-      <Paragraph align="center" weight={600} size={16} rootClassName="group-features-title">
-        {lang.projects.company.features.title}
-      </Paragraph>
-      <Row>{renderFeatures()}</Row>
-    </div>
+      <div className="group-features">
+        <Paragraph align="center" weight={600} size={16} rootClassName="features-title">
+          {lang.projects.company.features.title}
+        </Paragraph>
+        <Row>{renderFeatures()}</Row>
+      </div>
+    </SectionCard>
   );
 };
 

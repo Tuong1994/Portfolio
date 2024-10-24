@@ -1,8 +1,20 @@
 import { useState, useEffect } from "react";
 
+export const breakpoint = {
+  SM_PHONE: 320,
+  MD_PHONE: 480,
+  LG_PHONE: 576,
+  SM_TABLET: 667,
+  MD_TABLET: 768,
+  LG_TABLET: 992,
+  LAPTOP: 1200,
+};
+
 const useViewpoint = () => {
   if (typeof window === "undefined")
     return { screenWidth: 0, isPhone: false, isTablet: false, isLaptop: false, isDesktop: false };
+
+  const { SM_PHONE, MD_PHONE, MD_TABLET } = breakpoint;
 
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
@@ -12,11 +24,11 @@ const useViewpoint = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isPhone = screenWidth >= 320 && screenWidth <= 480;
+  const isPhone = screenWidth >= SM_PHONE && screenWidth <= MD_PHONE;
 
-  const isTablet = screenWidth > 480 && screenWidth <= 768;
+  const isTablet = screenWidth > MD_PHONE && screenWidth <= MD_TABLET;
 
-  const isLaptop = screenWidth > 768 && screenWidth <= 1100;
+  const isLaptop = screenWidth > MD_TABLET && screenWidth <= 1100;
 
   const isDesktop = screenWidth > 1100;
 

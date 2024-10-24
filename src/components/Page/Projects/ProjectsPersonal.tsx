@@ -1,18 +1,16 @@
-import { Fragment, FC } from "react";
-import { UI } from "@/components";
+import { FC, Fragment } from "react";
+import { Carousel } from "@/components/UI";
 import { Lang } from "@/common/lang";
-import { InfoRow } from "@/components/UI";
-import { InfoRowProps } from "@/components/UI/InfoRow";
 import { ThemeColor } from "@/store/ThemeStore";
-import IconView from "../Common/IconView";
+import { Projects } from "./type";
+import { CarouselItems } from "@/components/UI/Carousel/type";
+import { useViewpoint } from "@/hooks";
+import { breakpoint } from "@/hooks/useViewpoint";
+import PersonalItem from "./PersonalItem";
+import PersonalItemMobile from "./PersonalItemMobile";
+import useLayoutStore from "@/components/UI/Layout/LayoutStore";
 
-const { Grid, Typography, UList, Image, Divider, Space, Button } = UI;
-
-const { Row, Col } = Grid;
-
-const { Paragraph } = Typography;
-
-const { List, ListItem } = UList;
+const { Horizontal } = Carousel;
 
 interface ProjectsPersonalProps {
   lang: Lang;
@@ -20,7 +18,17 @@ interface ProjectsPersonalProps {
 }
 
 const ProjectsPersonal: FC<ProjectsPersonalProps> = ({ lang, color }) => {
-  const projects = [
+  const { screenWidth } = useViewpoint();
+
+  const { LG_TABLET } = breakpoint;
+
+  const mode = useLayoutStore((state) => state.layoutTheme);
+
+  const carouselMode = mode === "dark" ? "light" : "dark";
+
+  const responsive = screenWidth <= LG_TABLET;
+
+  const projects: Projects = [
     {
       id: "healthy-food-main",
       title: lang.projects.personal.healthyFood.main.title,
@@ -60,58 +68,24 @@ const ProjectsPersonal: FC<ProjectsPersonalProps> = ({ lang, color }) => {
     },
   ];
 
-  const infoRowProps: InfoRowProps = {
-    labelProps: { size: 16 },
-    textProps: { size: 16 },
-    labelSpanProps: { span: 3 },
-    textSpanProps: { xs: 24, md: 20, lg: 20, span: 20 },
-  };
-
-  const renderTechs = (techs: string[]) => {
-    return (
-      <Space>
-        {techs.map((tech) => (
-          <IconView key={tech} src={`/dev/${tech}.svg`} hasHover={false} iconWidth={25} iconHeight={25} borderWidth={5} />
-        ))}
-      </Space>
-    );
-  };
+  const carouselItem: CarouselItems = projects.map((project, idx) => ({
+    id: project.id,
+    content: <PersonalItem lang={lang} color={color} project={project} idx={idx} />,
+  }));
 
   const renderContent = () => {
-    return projects.map((project) => (
-      <div className="project-card" key={project.id}>
-        <Paragraph weight={600} size={18} rootClassName="card-title">
-          {project.title}
-        </Paragraph>
-        <Divider />
-        <InfoRow {...infoRowProps} label={lang.projects.description} text={project.description} />
-        <InfoRow {...infoRowProps} label={lang.projects.tech} text={renderTechs(project.techs)} />
-        <Divider />
-        <Row justify="between">
-          <Col xs={24} md={24} lg={12} span={12}>
-            <List head={lang.projects.personal.features}>
-              {project.features.map((feature) => (
-                <ListItem key={feature}>
-                  <Paragraph>{feature}</Paragraph>
-                </ListItem>
-              ))}
-            </List>
-          </Col>
-          <Col xs={24} md={24} lg={12} span={12}>
-            <div className="card-image">
-              <div className="image-wrapper">
-                <Image imgWidth="100%" src={project.imageUrl} />
-              </div>
-              <Space rootClassName="image-action">
-                <a href={project.link} target="_blank">
-                  <Button color={color}>{lang.projects.personal.demo}</Button>
-                </a>
-              </Space>
-            </div>
-          </Col>
-        </Row>
-      </div>
-    ));
+    if (responsive)
+      return projects.map((project) => (
+        <PersonalItemMobile key={project.id} lang={lang} color={color} project={project} />
+      ));
+    return (
+      <Horizontal
+        rootClassName="projects-carousel"
+        hasArrow={false}
+        mode={carouselMode}
+        items={carouselItem}
+      />
+    );
   };
 
   return <Fragment>{renderContent()}</Fragment>;

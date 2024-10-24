@@ -32,6 +32,9 @@
     margin-bottom: $m-2;
     border-radius: $rounded-lg;
     background: $bg-white;
+    & * {
+      color: $text-black
+    };
   }
 }
 
