@@ -2,7 +2,7 @@
   .projects-tabs {
     opacity: 0;
     transform: translateY(-10rem);
-    transition: all $transition-time-md $transition-fn;
+    transition: opacity $transition-time-md $transition-fn, transform $transition-time-md $transition-fn;
     .tabs-head {
       margin-bottom: $m-2;
       height: $h-5;
