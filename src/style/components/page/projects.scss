@@ -58,9 +58,6 @@
       border-top-left-radius: $rounded-lg;
       transition: all $transition-time-sm $transition-fn;
     }
-    @include respond(mdPhone) {
-      padding-left: $p-2;
-    }
   }
   .projects-card,
   .projects-item-mobile {
